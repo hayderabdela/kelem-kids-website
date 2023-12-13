@@ -1,0 +1,141 @@
+/* ProgramSection.css */
+
+.info-section {
+    margin-top: 80px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+.information {
+    max-width: 1000px;
+    color: #333;
+}
+
+.info-title {
+    background-color: #FF69B4;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.info-title h2 {
+    margin: 0;
+    font-size: 2em;
+    color: #fff;
+}
+
+.info-container {
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    /* Distribute the cards evenly */
+}
+
+.card-container {
+    flex: 1 1 calc(20% - 20px);
+    /* Five cards in a row with some gap */
+    width:80%;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 400px;
+    /* Ensure content is not hidden by overflow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    background-color: #3498db;
+    /* Set background color for the card */
+}
+
+
+
+.card {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1.2em;
+    /* Adjust the font size as needed */
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    height: 80%;
+    background-color: #ff6347;
+    /* Ensure the title is fully visible */
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-container a {
+    text-decoration: none;
+    color: black;
+    border-radius: 30px;
+    /* Make the border radius larger */
+    font-weight: bold;
+    font-size: 24px;
+    /* Increase the font size */
+    /* padding: 15px 30px; */
+    /* Increase padding for more click area */
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.card-container a:hover {
+    box-shadow: 0 0 10px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan, 0 0 400px cyan;
+    color: magenta;
+    transform: scale(1.1) rotate(5deg);
+    /* Increase scale on hover */
+}
+
+.card-container p {
+    font-size: 1rem;
+    color: gray;
+    padding: 15px;
+    padding-top: 30px;
+    /* Set text color for the description */
+    /* Add some margin between title and description */
+}
+
+.card:hover {
+    color: #2ecc71;
+    /* Change text color on hover */
+    transform: scale(1.1) rotate(5deg);    /* Playful scale effect on hover */
+}
+
+@media screen and (max-width: 1200px) {
+    .info-container {
+        gap: 15px;
+    }
+
+    .card-container {
+        flex: 1 1 calc(25% - 15px);
+        max-width: calc(25% - 15px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .info-container {
+        gap: 10px;
+    }
+
+    .card-container {
+        flex: 1 1 calc(50% - 10px);
+        max-width: calc(50% - 10px);
+    }
+
+    .card p {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .card-container {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}

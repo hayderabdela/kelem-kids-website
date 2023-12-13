@@ -1,0 +1,68 @@
+/* Update your existing bookstore.css or create a new CSS file */
+
+.book-details-page {
+  height: 700px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #f0f8ff; /* Light blue background */
+  border-radius: 15px;
+  transition: background-color 0.3s ease; /* Smooth transition on background color change */
+  position: relative;
+}
+
+
+
+.book-details-page:hover {
+  background-color: #d3e0ea; /* Lighter blue background on hover */
+}
+
+.book-details-cover {
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle box shadow for the cover */
+  transition: transform 0.3s ease; /* Smooth transition on hover effect */
+}
+
+.book-details-cover:hover {
+  transform: scale(1.05); /* Scale up the cover on hover */
+}
+
+.book-details-content {
+  max-width: 1200px;
+  height: 300px;
+  text-align: left;
+  background-color: #fff; /* White background for content */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle box shadow for content */
+  transition: box-shadow 0.3s ease; /* Smooth transition on box shadow change */
+}
+
+.book-details-content:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Slightly larger box shadow on hover */
+}
+
+.book-details-title {
+  font-size: 32px;
+  color: #2c3e50; /* Dark blue-gray color for title */
+  margin-bottom: 10px;
+  font-family: 'Comic Sans MS', cursive;
+      /* Use a child-friendly font */
+}
+
+.book-details-author {
+  font-size: 18px;
+  color: #3498db; /* Bright blue color for author */
+  margin-bottom: 15px;
+}
+
+.book-details-description {
+  font-size: 15px;
+  color: #555; /* Dark gray color for description */
+}
+
+/* Add more styles as needed based on your preferences */

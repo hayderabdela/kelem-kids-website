@@ -1,0 +1,142 @@
+.header {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  margin-top: 12rem;
+}
+
+.header-content {
+  margin-top: 40px;
+  height: 430px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-right: 5rem;
+  margin-left: 2rem;
+}
+
+.header-content h1 {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 45px;
+  letter-spacing: -0.02em;
+}
+
+.header-content p {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 28px;
+  margin-top: 1.5rem;
+}
+
+.header-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+  to {
+    transform: translateY(-40px);
+  }
+}
+
+.header-image img {
+  width: 60%;
+  height: 50%;
+  border-radius: 50%;
+}
+
+.header-image img:hover {
+    transform: scale(1.1) rotate(5deg) translate(5px, -5px);
+    /* Add scaling, rotating, and subtle movement on hover */
+    filter: brightness(1.2);
+    /* Increase brightness on hover */
+    box-shadow: 0 0 15px cyan, 0 0 30px cyan, 0 0 60px cyan, 0 0 120px cyan;
+    /* Add a subtle box-shadow on hover */
+    border-radius: 50%;
+}
+
+
+.header-button button {
+  margin: 20px;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  background: #ff4820;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  border: solid rgb(241, 180, 67) 5px;
+  outline: none;
+  cursor: pointer;
+  border-radius: 10px;
+  align-self: center;
+}
+
+.header-button button:hover{
+    animation: pulse 0.5s infinite;
+    /* Add a pulsating animation */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media screen and (max-width: 1050px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .header-content {
+    margin: 0 0 3rem;
+  }
+
+  .header-image {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .header-content h1 {
+    font-size: 48px;
+    line-height: 60px;
+  }
+
+  .header-content p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .header-image {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .header-content h1 {
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  .header-content p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .header-image {
+    width: 75%;
+  }
+}

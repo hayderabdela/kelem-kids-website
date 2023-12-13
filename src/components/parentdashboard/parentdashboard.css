@@ -1,0 +1,144 @@
+/* parentdashboard.css */
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+}
+
+.parent-dashboard {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #6a1b9a;
+    /* Purple background color */
+    color: #fff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.children-list {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.child {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.child:hover {
+    background-color: #512da8;
+    /* Darker purple on hover */
+}
+
+.child.selected {
+    background-color: #512da8;
+    /* Darker purple for selected */
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background-color: #fff;
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-profile img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+/* parentdashboard.css */
+
+.child-details {
+    padding: 20px;
+    background-color: #ffcc00;
+    /* Vibrant yellow background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+.child-details h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.user-profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.progress-section {
+    margin-top: 20px;
+}
+
+.progress-item {
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    max-width:25%;
+    background-color: #ddd;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar div {
+    height: 100%;
+    background-color: #ff4081;
+    transition: width 0.5s ease;
+}
+
+.activities {
+    margin-top: 20px;
+}
+
+.activities h3 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.activities ul {
+    list-style: none;
+    padding: 0;
+}
+
+.activities li {
+    margin-bottom: 10px;
+    color: #666;
+    font-weight: bold;
+    font-size: 16px;
+}

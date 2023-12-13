@@ -1,0 +1,94 @@
+/* Footer.css */
+
+footer {
+    background-color: yellowgreen;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer_main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag {
+    margin: 60px;
+    max-width: 450px;
+}
+
+
+.tag h1 {
+    color: #ff69b4;
+}
+
+.tag a {
+    display: block;
+    margin-top: 8px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    text-align: left;
+}
+
+.tag a:hover {
+    color: #e74c3c;
+}
+
+.tag p {
+    margin-top: 10px;
+    color: #555;
+}
+
+.social_link {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.social_link i {
+    font-size: 24px;
+    color: #3498db;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social_link i:hover {
+    transform: scale(1.2);
+}
+
+.search_bar {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.search_bar input {
+    padding: 8px;
+    width: 150px;
+}
+
+.search_bar button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.end {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+.end span {
+    margin-left: 5px;
+    color: #ff69b4;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .tag {
+        max-width: 40%;
+    }
+
+}
