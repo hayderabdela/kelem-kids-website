@@ -1,4 +1,6 @@
 .navbar {
+    font-family: 'Boogaloo', sans-serif;
+    background-color: #b869c1;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -8,6 +10,7 @@
 }
 
 a {
+    font-family: 'Boogaloo', sans-serif;
     text-decoration: none;
 }
 
@@ -16,6 +19,7 @@ a {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    gap: 250px;
 }
 
 .navbar-links_logo {
@@ -34,8 +38,9 @@ a {
 
 
 .navbar-links_container a {
+    /* font-family: 'Bubblegum', sans-serif;
+ */
     font-size: larger;
-    font-family: 'Times New Roman', Times, serif;
     padding: 10px;
     color: black;
     transition: color 0.9s;

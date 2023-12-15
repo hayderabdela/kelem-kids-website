@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -6,9 +7,9 @@
 }
 
 body {
-  font-family:"Open Sans", "Helvetica Neue", sans-serif;
+  font-family: 'Boogaloo', sans-serif;
   /* margin: 0; */
   overflow-x: hidden;
   flex: 1;
-  background: linear-gradient(90deg, rgba(170, 255, 0, 1) 0%, rgba(227, 205, 0, 1) 100%, rgba(238, 130, 238, 1) 100%);
+  background: linear-gradient(90deg, rgba(50, 189, 194, 1) 0%, rgba(56, 198, 203, 100%) 100%);
 }

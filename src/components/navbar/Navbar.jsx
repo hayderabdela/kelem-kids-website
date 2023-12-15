@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef} from "react";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
-import logo from "../../assets/kelemkids-logos_transparent.png"
+// import logo from "../../assets/kelemkids-logos_transparent.png"
 
 import "./navbar.css";
 import { Link } from "react-router-dom";
@@ -44,10 +44,10 @@ const Navbar = () => {
     <div className="navbar">
       <div className="navbar-links">
         <div className="navbar-links_logo">
-          <img src={logo} alt="logo" />
+          <h1>KelemKids.</h1>
         </div>
         <div className="navbar-links_container">
-          <p>
+          <p >
             <Link to={'/'}>Home</Link>
           </p>
           <p>
