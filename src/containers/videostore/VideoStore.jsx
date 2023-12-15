@@ -9,7 +9,10 @@ const VideoList = () => {
   const [selectedGenre, setSelectedGenre] = useState("all");
   const [searchTerm, setSearchTerm] = useState("");
 
-  // Filter videos based on selected genre and search term
+  const handleGenreButtonClick = (genre) => {
+    setSelectedGenre(genre);
+  };
+
   const filteredVideos = videolist.filter(
     (video) =>
       (selectedGenre.toLowerCase() === "all" ||
@@ -19,48 +22,52 @@ const VideoList = () => {
 
   return (
     <div className="video-store">
-      <h1>Welcome to Kids VideoStore</h1>
-      <div className="filter-bar">
-        <label>
-          Filter by Genre:
-          <select
-            value={selectedGenre}
-            onChange={(e) => setSelectedGenre(e.target.value)}
-          >
-            <option value="all">All Genres</option>
-            <option value="story">Story</option>
-            <option value="academic">Academic</option>
-            <option value="sport">Sport</option>
-            <option value="art">Art</option>
-            <option value="funny">Funny</option>
-          </select>
-        </label>
-        <input
-          type="text"
-          placeholder="Search by title..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
+      <div className="title">
+              <h1>Welcome to Kids VideoStore</h1>
       </div>
-      <div className="all-video">
-      {filteredVideos.map((video) => (
-        <div key={video.public_id} className="video-item">
-          {video.url && (
-            <>
-              <video controls width="100%" height="auto">
-                <source src={video.url} type={`video/${video.format}`} />
-                Your browser does not support the video tag.
-              </video>
-              <div className="video-content">
-                <h4>{video.title}</h4>
-                <p>{video.description}</p>
-                <p>Genre: {video.genre}</p>
-              </div>
-            </>
+      <div className="filter-bar">
+        <div className="button">
+          {["all", "story", "academic", "sport", "art", "funny"].map(
+            (genre) => (
+              <button
+                key={genre}
+                onClick={() => handleGenreButtonClick(genre)}
+                className={`genre-button ${selectedGenre === genre ? "active" : ""}`}
+              >
+                {genre === "all" ? "All Genres" : genre}
+              </button>
+            )
           )}
         </div>
-      ))}
-    </div>
+        <div className="search-bar">
+          <lable>Serach by title</lable>
+          <input
+            type="text"
+            placeholder="Enter Title..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            />
+       </div>
+      </div>
+      <div className="all-video">
+        {filteredVideos.map((video) => (
+          <div key={video.public_id} className="video-item">
+            {video.url && (
+              <>
+                <video controls width="100%" height="auto">
+                  <source src={video.url} type={`video/${video.format}`} />
+                  Your browser does not support the video tag.
+                </video>
+                <div className="video-content">
+                  <h4>{video.title}</h4>
+                  <p>{video.description}</p>
+                  <p>Genre: {video.genre}</p>
+                </div>
+              </>
+            )}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

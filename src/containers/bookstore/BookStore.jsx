@@ -10,55 +10,74 @@ const books = [
     title: "The Magical Adventures",
     author: "Lily Meadows",
     cover: require("../../assets/arrival_1.jpg"),
-    ageGroup: "3-6",
+    category: "academic", // Corrected property name
   },
   {
     id: 2,
     title: "Wonderful Stories for Kids",
     author: "Celeste Moonlight",
     cover: require("../../assets/acadamic-2.jpg"),
-    ageGroup: "7-10",
+    category: "story", // Corrected property name
   },
-    {
+  {
     id: 3,
     title: "The Magical Adventures",
     author: "Lily Meadows",
     cover: require("../../assets/story-1.jpg"),
-    ageGroup: "3-6",
+    category: "religious", // Corrected property name
   },
   {
     id: 4,
     title: "The Dancing Stars",
     author: "Celeste Moonlight",
     cover: require("../../assets/story-2.jpg"),
-    ageGroup: "7-10",
+    category: "sport", // Corrected property name
   },
-  // Add more books as needed with different age groups
+  // Add more books as needed with different categories
 ];
 
 const BookStore = () => {
-  const [selectedBook, setSelectedBook] = useState(null);
-  const [selectedAgeGroup, setSelectedAgeGroup] = useState("all");
+  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [searchTerm, setSearchTerm] = useState("");
 
-  const filteredBooks =
-    selectedAgeGroup === "all"
-      ? books
-      : books.filter((book) => book.ageGroup === selectedAgeGroup);
+  const handleCategoryButtonClick = (category) => {
+    setSelectedCategory(category);
+  };
+
+  const handleSearchInputChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
+  const filteredBooks = books.filter(
+    (book) =>
+      (selectedCategory === "all" || book.category === selectedCategory) &&
+      book.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <div className="bookstore-container">
-      <h2 className="bookstore-title">Welcome to the Kids Bookstore</h2>
-      <div className="age-selector">
-        <label htmlFor="ageGroup">Filter by Age Group:</label>
-        <select
-          id="ageGroup"
-          onChange={(e) => setSelectedAgeGroup(e.target.value)}
-        >
-          <option value="all">All Ages</option>
-          <option value="3-6">3-6 years</option>
-          <option value="7-10">7-10 years</option>
-          {/* Add more age groups as needed */}
-        </select>
+      <div className="bookstore-title"><h1 >Welcome to the Kids Bookstore</h1></div>
+      <div className="category-selector">
+        <div className="category-buttons">
+          {["all", "academic", "story", "sport", "religious"].map((category) => (
+            <button
+              key={category}
+              onClick={() => handleCategoryButtonClick(category)}
+              className={`category-button ${selectedCategory === category ? "active" : ""}`}
+            >
+              {category === "all" ? "All Books" : category.charAt(0).toUpperCase() + category.slice(1)}
+            </button>
+          ))}
+        </div>
+      </div>
+      <div className="search-bar">
+        <label>Search by Title:</label>
+        <input
+          type="text"
+          placeholder="Enter title..."
+          value={searchTerm}
+          onChange={handleSearchInputChange}
+        />
       </div>
       <div className="books">
         {filteredBooks.map((book) => (
@@ -79,3 +98,4 @@ const BookStore = () => {
 };
 
 export default BookStore;
+

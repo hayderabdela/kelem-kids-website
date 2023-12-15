@@ -1,6 +1,5 @@
 .bookstore-container {
     width: 100%;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,51 +7,138 @@
     text-align: center;
     background: linear-gradient(to right top, #ffa07a, #87ceeb);
         /* Gradient background */ 
-    border-radius: 15px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
 
-.bookstore-title {
-    font-size: 36px;
-    color: #333;
-    margin-bottom: 20px;
-    font-family: 'Comic Sans MS', cursive;
+/* bookstore.css */
+
+@keyframes colorChange {
+
+    0%,
+    100% {
+        color: #3498db;
+        filter: brightness(1);
+        transform: translateY(0);
+        /* Initial and final position */
+    }
+
+    25% {
+        color: #e74c3c;
+        filter: brightness(1.2);
+        transform: translateY(-5px);
+        /* Move up */
+    }
+
+    50% {
+        color: #2ecc71;
+        filter: brightness(1);
+        transform: translateY(5px);
+        /* Move down */
+    }
+
+    75% {
+        color: #f39c12;
+        filter: brightness(1.2);
+        transform: translateY(-5px);
+        /* Move up */
+    }
 }
 
-.age-selector {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+.bookstore-title h1 {
+    font-weight: bold;
+    text-align: center;
+    margin: 30px;
+    animation: colorChange 10s infinite;
+    /* Adjust the duration as needed */
 }
 
-label {
+
+.search-bar label {
     font-size: 16px;
     color: #333;
     margin-right: 10px;
 }
 
-#ageGroup {
-    padding: 10px;
-    font-size: 14px;
-    border: 2px solid #3498db;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: border-color 0.3s ease-in-out;
-}
 
-#ageGroup:hover {
-    border-color: #2980b9;
-}
 
 .books {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 20px;
-    overflow-y: auto;
+    overflow: hidden;
+    margin-top: 20px;
     /* Add scroll if needed */
+}
+.category-selector {
+    margin-bottom: 20px;
+}
+
+.category-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.category-button {
+    padding: 8px 16px;
+    font-size: 25px;
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+    transition: background-color 0.3s, transform 0.3s, color 0.3s;
+    background-color: #ff69b4;
+    /* Hot Pink color, you can choose any vibrant color */
+    color: #fff;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    /* Playful font */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.category-button:hover {
+    background-color: #ff1493;
+    /* Deep Pink color on hover */
+    transform: scale(1.1);
+    color: #fff;
+    /* Change text color on hover */
+}
+
+.category-button.active {
+    background-color: #ff6347;
+    /* Tomato color for active button */
+    color: #fff;
+    /* Change text color for active button */
+}
+
+.search-bar-container {
+    margin-top: 10px;
+}
+
+.search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input[type="text"] {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #888;
+    transition: color 0.3s;
+}
+
+.search-icon:hover {
+    color: #555;
 }
 
 .book-card {
