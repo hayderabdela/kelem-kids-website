@@ -1,33 +1,43 @@
+
 .header {
-  justify-content: space-between;
-  display: flex;
-  align-items: center;
+  background-image: url("../../assets/lp-hero.webp"); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  height: 700px;
+  /* justify-content: space-between; */
+  /* display: flex; */
+  /* align-items: center; */
   padding: 0.5rem 2rem;
   margin-top: 12rem;
 }
 
 .header-content {
-  margin-top: 40px;
-  height: 430px;
-  flex: 1;
+  height: 500px;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
   flex-direction: column;
-  margin-right: 5rem;
-  margin-left: 2rem;
+  flex: 1;
+  margin-right: 30rem;
+  margin-left: 5rem;
+  margin-bottom: 10rem;
+  gap: 5px;
+  
 }
 
 .header-content h1 {
+  font-family: 'Chewy', sans-serif;
+  color: #FFD700;
   font-weight: 800;
-  font-size: 40px;
-  line-height: 45px;
+  font-size: 60px;
+  line-height: 60px;
   letter-spacing: -0.02em;
 }
 
 .header-content p {
-  font-weight: 400;
-  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+  color:#FFD700;
+  font-weight: 450;
+  font-size: 20px;
   line-height: 28px;
   margin-top: 1.5rem;
 }
@@ -45,12 +55,12 @@
   }
 }
 
-.header-image img {
+/* .header-image img {
   width: 60%;
   height: 50%;
   border-radius: 50%;
 }
-
+ */
 .header-image img:hover {
     transform: scale(1.1) rotate(5deg) translate(5px, -5px);
     /* Add scaling, rotating, and subtle movement on hover */

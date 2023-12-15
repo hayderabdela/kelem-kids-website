@@ -2,27 +2,27 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #898888;
+  background-color: #b869c1;
   padding: 50px;
   margin: 50px 0 20px 0;
 }
 
 .verse-text {
   font-style: italic;
-  color: #dcff00;
+  color: #fff;
   max-width: 400px;
   font-weight: lighter;
 }
 
 .verse-place {
   font-weight: bold;
-  color: #dcff00;
+  color: #fff;
   padding-left: 200px;
 }
 
 .join-us {
   display: flex;
-  background-color: #ffff00;
+  background-color: #b869c1;
   padding: 50px;
   margin: 50px 150px 130px 150px;
   border-radius: 7px;

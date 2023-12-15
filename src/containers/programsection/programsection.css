@@ -1,6 +1,7 @@
 /* ProgramSection.css */
 
 .info-section {
+    background-color: #b869c1;
     margin-top: 80px;
     padding: 30px;
     display: flex;
@@ -17,7 +18,7 @@
 }
 
 .info-title {
-    background-color: #FF69B4;
+    background-color: #008181;
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -44,13 +45,13 @@
     width:80%;
     border-radius: 20px;
     overflow: hidden;
-    height: 400px;
+    height: 200px;
     /* Ensure content is not hidden by overflow */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    background-color: #3498db;
+    background-color: #008181;
     /* Set background color for the card */
 }
 
@@ -67,7 +68,7 @@
     text-align: center;
     text-decoration: none;
     height: 80%;
-    background-color: #ff6347;
+    background-color: #4285F4;
     /* Ensure the title is fully visible */
     transition: transform 0.3s ease-in-out;
 }
@@ -85,16 +86,15 @@
     transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-.card-container a:hover {
+/* .card-container a:hover {
     box-shadow: 0 0 10px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan, 0 0 400px cyan;
-    color: magenta;
     transform: scale(1.1) rotate(5deg);
-    /* Increase scale on hover */
-}
+    }    Increase scale on hover */
+
 
 .card-container p {
     font-size: 1rem;
-    color: gray;
+    /* color: gray; */
     padding: 15px;
     padding-top: 30px;
     /* Set text color for the description */
@@ -102,7 +102,7 @@
 }
 
 .card:hover {
-    color: #2ecc71;
+    color: #FFFFFF;
     /* Change text color on hover */
     transform: scale(1.1) rotate(5deg);    /* Playful scale effect on hover */
 }

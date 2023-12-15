@@ -4,7 +4,7 @@ import "./joinus.css"
 
 function JoinUs() {
   return (
-    <div>
+    <div className="join-hero">
       <section className="verse">
         <div className="verse-text">
           "Education is the most powerful weapon which you can use to change the
