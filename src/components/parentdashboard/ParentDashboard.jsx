@@ -1,7 +1,7 @@
 // ParentDashboard.jsx
 
 import React, { useState } from "react";
-import avater from "../../assets/avater1.jpg"
+import avatar from "../../assets/avater1.jpg";
 import "./parentdashboard.css";
 
 const ParentDashboard = () => {
@@ -24,6 +24,23 @@ const ParentDashboard = () => {
     },
   });
 
+  const renderProgressItem = (label, value, isProgressBar = false) => (
+    <div className="progress-item" key={label}>
+      <p>{label}:</p>
+      {isProgressBar ? (
+        <>
+          <div className="progress-bar">
+            <div style={{ width: `${value}%` }}></div>
+          </div>
+          <p>{value}%</p>
+        </>
+      ) : (
+        <p>{value}</p>
+      )}
+    </div>
+  );
+
+
   return (
     <div className="parent-dashboard">
       <div className="sidebar">
@@ -36,7 +53,7 @@ const ParentDashboard = () => {
       <div className="content">
         <div className="header">
           <div className="user-profile">
-            <img src={avater} alt="User Avatar" />
+            <img src={avatar} alt="User Avatar" />
             <span>Welcome, Parent Name</span>
           </div>
           <div className="logout">Logout</div>
@@ -45,26 +62,12 @@ const ParentDashboard = () => {
           <h2>{selectedChild.name}'s Dashboard</h2>
           <div className="progress-section">
             <h3>Progress Overview</h3>
-            <div className="progress-item">
-              <p>Reading Progress:</p>
-              <div className="progress-bar">
-                <div style={{ width: `${selectedChild.progress.reading}%` }}></div>
-              </div>
-              <p>{selectedChild.progress.reading}%</p>
-            </div>
-            <div className="progress-item">
-              <p>Game Playtime:</p>
-              <p>{selectedChild.progress.gamePlaytime}</p>
-            </div>
-            <div className="progress-item">
-              <p>Vocabulary Exercises:</p>
-              <p>{selectedChild.progress.vocabularyExercises} completed</p>
-            </div>
-            <div className="progress-item">
-              <p>Video Viewing Time:</p>
-              <p>{selectedChild.progress.videoViewing}</p>
-            </div>
+            {renderProgressItem("Reading Progress", selectedChild.progress.reading, true)}
+            {renderProgressItem("Game Playtime", selectedChild.progress.gamePlaytime)}
+            {renderProgressItem("Vocabulary Exercises", `${selectedChild.progress.vocabularyExercises} completed`)}
+            {renderProgressItem("Video Viewing Time", selectedChild.progress.videoViewing)}
           </div>
+    
           <div className="activities">
             <h3>Upcoming Activities:</h3>
             <ul>

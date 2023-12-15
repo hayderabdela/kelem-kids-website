@@ -1,6 +1,7 @@
 import React from 'react'
 import { Header, ProgramSection, JoinUs } from '../../containers';
-import { Navbar, Footer  } from '../../components';
+import { Navbar, Footer, } from '../../components';
+
 
 
 const Home = () => {
@@ -9,7 +10,7 @@ const Home = () => {
       <Navbar />
       <Header />
       <ProgramSection />
-      <JoinUs /> 
+      <JoinUs />
       <Footer />
     </div>
   )
