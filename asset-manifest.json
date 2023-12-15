@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/kelem-kids-website/static/css/main.5996ab8b.css",
+    "main.js": "/kelem-kids-website/static/js/main.d4a785a7.js",
+    "static/js/787.f5e50e7e.chunk.js": "/kelem-kids-website/static/js/787.f5e50e7e.chunk.js",
+    "static/media/avater1.jpg": "/kelem-kids-website/static/media/avater1.c6066bfe8de248f8b190.jpg",
+    "static/media/kid7.png": "/kelem-kids-website/static/media/kid7.8aebcf72c4958c58f8d8.png",
+    "static/media/story-2.jpg": "/kelem-kids-website/static/media/story-2.482e786a174f41780acd.jpg",
+    "static/media/arrival_1.jpg": "/kelem-kids-website/static/media/arrival_1.d1948ace75206eaa944a.jpg",
+    "static/media/acadamic-2.jpg": "/kelem-kids-website/static/media/acadamic-2.8342b009c360b3e66c5c.jpg",
+    "static/media/story-1.jpg": "/kelem-kids-website/static/media/story-1.1c8e62216fe18123d933.jpg",
+    "static/media/kelemkids-logos_transparent.png": "/kelem-kids-website/static/media/kelemkids-logos_transparent.af86462da6448ae0eaab.png",
+    "index.html": "/kelem-kids-website/index.html",
+    "main.5996ab8b.css.map": "/kelem-kids-website/static/css/main.5996ab8b.css.map",
+    "main.d4a785a7.js.map": "/kelem-kids-website/static/js/main.d4a785a7.js.map",
+    "787.f5e50e7e.chunk.js.map": "/kelem-kids-website/static/js/787.f5e50e7e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5996ab8b.css",
+    "static/js/main.d4a785a7.js"
+  ]
+}
