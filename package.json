@@ -1,4 +1,5 @@
 {
+  "homepage": "https://hayderabdela.github.io/kelem-kids-website",
   "name": "keleme-kids-website",
   "version": "0.1.0",
   "private": true,
@@ -26,6 +27,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -49,7 +52,7 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-transform-runtime": "^7.23.6"
+    "@babel/plugin-transform-runtime": "^7.23.6",
+    "gh-pages": "^6.1.0"
   }
-  
 }
