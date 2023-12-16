@@ -130,8 +130,7 @@ body {
 }
 
 .vocabulary-list li {
-  margin-bottom: 10px;
-  
+  margin-bottom: 50px;
   width: calc(25% - 20px); /* Set a percentage width for each box, considering margins */
   padding-top: calc(25% - 20px); /* Make the height match the width to create a square */
   background-color: #ffd54f;
@@ -160,7 +159,7 @@ body {
 .word {
   flex: 0 0 calc(33.33% - 10px); /* 10px for margin-right */
   box-sizing: border-box;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
 }
 
 .word img {
@@ -174,3 +173,15 @@ body {
   transform: scale(1.1);
 }
 
+button {
+  background-color: #e34561;
+  padding: 14px 40px;
+  border-radius: 10px;
+  font-size: 30px;
+}
+
+button:hover {
+  background-color:#3498db;
+  color: white;
+  transform: scale(1.1);
+}

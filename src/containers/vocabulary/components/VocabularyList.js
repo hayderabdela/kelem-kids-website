@@ -1,7 +1,7 @@
 // VocabularyList.js
 import React from 'react';
 
-const VocabularyList = ({ category, words, onImageClick }) => {
+const VocabularyList = ({ category, words, onButtonClick }) => {
   return (
     <div className="vocabulary-list">
       <div className="word-container">
@@ -10,10 +10,13 @@ const VocabularyList = ({ category, words, onImageClick }) => {
             <img
               src={word.image}
               alt={word.name}
-              onClick={() => onImageClick(word.audio)}
+              onClick={() => onButtonClick(word.audio)}
               style={{ cursor: 'pointer', marginRight: '10px' }}
             />
-            <p>{word.name}</p>
+            <div className='button-container'>
+              <button onClick={() => onButtonClick(word.audio)}>play the sound</button>
+              </div>
+            <h3>{word.name}</h3>
           </div>
         ))}
       </div>
