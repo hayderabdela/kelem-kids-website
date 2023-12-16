@@ -66,7 +66,8 @@ body {
   align-items: center;
   padding: 20px;
 }
-h2 {
+
+.app h2 {
   font-size: 20px;
   float: right;
   margin-left: 5px;

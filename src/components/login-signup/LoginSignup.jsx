@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./loginsignup.css";
 
 const LoginSignup = () => {
@@ -6,9 +6,31 @@ const LoginSignup = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
-  
+  const [errorMessage, setErrorMessage] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+
+  useEffect(() => {
+    // Check if user is coming back from dashboard
+    const loggedIn = sessionStorage.getItem("loggedIn");
+    if (loggedIn) {
+      // Reset fields and remove flag
+      setUsername("");
+      setPassword("");
+      setEmail("");
+      sessionStorage.removeItem("loggedIn");
+    }
+  }, []);
+
   const handleToggle = () => {
     setLogin((prevIsLogin) => !prevIsLogin);
+    setUsername("");
+    setPassword("");
+    setEmail("");
+    setErrorMessage("");
+  };
+
+  const handlePasswordToggle = () => {
+    setShowPassword((prevShowPassword) => !prevShowPassword);
   };
 
   const handleSubmit = async (e) => {
@@ -30,34 +52,32 @@ const LoginSignup = () => {
           email,
         }),
       });
-      console.log(response.data)
+
       if (response.ok) {
         const data = await response.json();
-        console.log(data);
 
-        // Handle successful login or registration here
         if (isLogin) {
-          // For login, you might want to store the token in localStorage or handle redirection
           localStorage.setItem("token", data.token);
-          // Redirect to a dashboard or home page
+          sessionStorage.setItem("loggedIn", "true"); // Set the flag
           window.location.href = "/parentdashboard";
         } else {
-          // For registration, you might want to display a success message or redirect to login
           console.log("User registered successfully");
-          window.location.href = '/login-signup'
-          // Redirect to the login page
-          // Example: setLogin(true);
+          window.location.href = "/login-signup";
         }
       } else {
-        // Handle errors for unsuccessful login or registration
         const errorData = await response.json();
         console.error("Error:", response.status, errorData.message);
+        setErrorMessage("Invalid username or password.");
       }
     } catch (error) {
       console.error(error);
+      setErrorMessage("Something went wrong. Please try again.");
     }
-  };
 
+    setUsername("");
+    setPassword("");
+    setEmail("");
+  };
 
   return (
     <div className="login-signup-container">
@@ -74,14 +94,20 @@ const LoginSignup = () => {
         />
 
         <label htmlFor="password">Password:</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          required
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+        <div className="password-input-container">
+          <input
+            type={showPassword ? "text" : "password"}
+            id="password"
+            name="password"
+            required
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <i
+            className={`fas ${showPassword ? "fa-eye-slash" : "fa-eye"}`}
+            onClick={handlePasswordToggle}
+          ></i>
+        </div>
 
         {!isLogin && (
           <>
@@ -99,7 +125,7 @@ const LoginSignup = () => {
 
         <button type="submit">{isLogin ? "Login" : "Sign Up"}</button>
       </form>
-
+      {errorMessage && <p className="error-message">{errorMessage}</p>}
       <p>
         {isLogin ? "Don't have an account?" : "Already have an account?"}
         <button type="button" onClick={handleToggle}>
