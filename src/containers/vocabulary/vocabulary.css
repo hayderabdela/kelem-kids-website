@@ -1,0 +1,175 @@
+/* App.css */
+/* LzcdxnWh6atHxOdckizmCpOCEC691FhrvqTxkGUCgBKCvrzqtxVUD8zc */
+/* for sound nJdQwcFYX0EGw3nemXiyjZbNadooWME4Sty7bcHT */
+
+/* Responsive styles for small screens */
+/* Responsive styles for small screens */
+/* Responsive styles for small screens (phones) */
+
+
+/* Your existing category list styles */
+
+/* Responsive styles for tablets and phones */
+
+@media screen and  (min-width:1500px) {
+    .category-list li {
+      width: 100px; /* Adjust width for responsiveness on larger screens */
+      height: 35px;
+      font-size: 25px;   
+    }
+  }
+
+@media screen and (max-width: 1500px) {
+  .category-list {
+    justify-content: space-between;
+    padding: 8px;
+    font-size: 1.5rem;
+  }
+
+  .category-list ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .category-list li {
+    width: 100px; /* Adjust width for responsiveness on larger screens */
+    font-size: 15px;   
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .category-list {
+    justify-content: flex-start;
+    padding: 6px;
+  }
+
+  .category-list ul {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .category-list li {
+    width: 80px; /* Make the boxes take full width on smaller screens */
+    font-size: 15px;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #FF8200; /* Light pink background */
+}
+
+.app {
+  display: flex;
+  flex-direction: column; /* Updated to a column layout */
+  align-items: center;
+  padding: 20px;
+}
+h2 {
+  font-size: 20px;
+  float: right;
+  margin-left: 5px;
+}
+ 
+.incateg img {
+  width: 50px;
+  border-radius: 10px;
+}
+.category-list {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ffc517;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.category-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.category-list li {
+  cursor: pointer;
+  margin: 10px; /* Adjust margin for spacing */
+  width: 120px; /* Set a fixed width for each box */
+  height: 35px;
+  font-size: 15px;
+  background-color: #e34561;
+  color:#ffc517 ;
+  padding: 8px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.category-list li:hover {
+  background-color: #b1943f;
+  color: black;
+  transform: scale(1.1);
+}
+
+.vocabulary-list {
+  width: 100%; /* Make the vocabulary list cover the full width */
+
+}
+
+.vocabulary-list ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+.vocabulary-list li {
+  margin-bottom: 10px;
+  
+  width: calc(25% - 20px); /* Set a percentage width for each box, considering margins */
+  padding-top: calc(25% - 20px); /* Make the height match the width to create a square */
+  background-color: #ffd54f;
+  padding: 8px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
+  height: 200px;
+  box-sizing: border-box; /* Ensure padding and border are included in the width and height */
+}
+
+.vocabulary-list li:hover {
+  background-color: #ffc107;
+  color: #fff;
+}
+
+/* Add this to your App.css or create a new CSS file */
+.word-container {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: centers;
+  margin-left: 80px;
+  margin-top: 80px;
+}
+
+.word {
+  flex: 0 0 calc(33.33% - 10px); /* 10px for margin-right */
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.word img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.word img:hover {
+  transform: scale(1.1);
+}
+
