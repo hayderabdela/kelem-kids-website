@@ -56,9 +56,17 @@ const BookStore = () => {
 
   return (
     <div className="bookstore-container">
-      <div className="bookstore-title"><h1 >Welcome to the Kids Bookstore</h1></div>
-      <div className="category-selector">
-        <div className="category-buttons">
+      {/* Hero section with background image */}
+      <div className="hero">
+        <h1>Welcome to the Kids Bookstore</h1>
+        {/* Other content or elements in the hero section */}
+      </div>
+
+      {/* Content section below the hero */}
+      <div className="books-activity">
+      <div className="content">
+        <div className="category-selector">
+          <div className="category-buttons">
           {["all", "academic", "story", "sport", "religious"].map((category) => (
             <button
               key={category}
@@ -68,18 +76,19 @@ const BookStore = () => {
               {category === "all" ? "All Books" : category.charAt(0).toUpperCase() + category.slice(1)}
             </button>
           ))}
+          </div>
         </div>
-      </div>
-      <div className="search-bar">
-        <label>Search by Title:</label>
-        <input
-          type="text"
-          placeholder="Enter title..."
-          value={searchTerm}
-          onChange={handleSearchInputChange}
+        <div className="search-bar">
+           <label>Search by Title:</label>
+          <input
+            type="text"
+            placeholder="Enter title..."
+            value={searchTerm}
+            onChange={handleSearchInputChange}
         />
-      </div>
-      <div className="books">
+
+        </div>
+        <div className="books">
         {filteredBooks.map((book) => (
           <div key={book.id} className="book-card">
             <img src={book.cover} alt={book.title} className="book-cover" />
@@ -92,10 +101,33 @@ const BookStore = () => {
             </Link>
           </div>
         ))}
+
+        </div>
+      </div>
+
       </div>
     </div>
   );
 };
 
 export default BookStore;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

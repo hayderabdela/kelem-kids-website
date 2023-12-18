@@ -1,13 +1,14 @@
-
 .header {
-  background-image: url("../../assets/lp-hero.webp"); /* Replace with your image path */
+  background-image: url("../../assets/lp-hero1.webp");
+  /* Replace with your image path */
   background-size: cover;
   background-position: center;
-  height: 700px;
+  height: 600px;
   /* justify-content: space-between; */
   /* display: flex; */
   /* align-items: center; */
-  padding: 0.5rem 2rem;
+  /* padding: 0.5rem 2rem; */
+  margin-top: 12rem;
 }
 
 .header-content {
@@ -20,7 +21,7 @@
   margin-left: 5rem;
   margin-bottom: 10rem;
   gap: 5px;
-  
+
 }
 
 .header-content h1 {
@@ -34,11 +35,11 @@
 
 .header-content p {
   font-family: 'Roboto', sans-serif;
-  color:#FFD700;
+  color: #FFD700;
   font-weight: 450;
   font-size: 20px;
   line-height: 28px;
-  margin-top: 1.5rem;
+  /* margin-top: 1.5rem; */
 }
 
 .header-image {
@@ -61,13 +62,13 @@
 }
  */
 .header-image img:hover {
-    transform: scale(1.1) rotate(5deg) translate(5px, -5px);
-    /* Add scaling, rotating, and subtle movement on hover */
-    filter: brightness(1.2);
-    /* Increase brightness on hover */
-    box-shadow: 0 0 15px cyan, 0 0 30px cyan, 0 0 60px cyan, 0 0 120px cyan;
-    /* Add a subtle box-shadow on hover */
-    border-radius: 50%;
+  transform: scale(1.1) rotate(5deg) translate(5px, -5px);
+  /* Add scaling, rotating, and subtle movement on hover */
+  filter: brightness(1.2);
+  /* Increase brightness on hover */
+  box-shadow: 0 0 15px cyan, 0 0 30px cyan, 0 0 60px cyan, 0 0 120px cyan;
+  /* Add a subtle box-shadow on hover */
+  border-radius: 50%;
 }
 
 
@@ -86,23 +87,23 @@
   align-self: center;
 }
 
-.header-button button:hover{
-    animation: pulse 0.5s infinite;
-    /* Add a pulsating animation */
+.header-button button:hover {
+  animation: pulse 0.5s infinite;
+  /* Add a pulsating animation */
 }
 
 @keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
+  0% {
+    transform: scale(1);
+  }
 
-    50% {
-        transform: scale(1.1);
-    }
+  50% {
+    transform: scale(1.1);
+  }
 
-    100% {
-        transform: scale(1);
-    }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @media screen and (max-width: 1050px) {
@@ -145,6 +146,7 @@
     font-size: 14px;
     line-height: 24px;
   }
+
   .header-image {
     width: 75%;
   }

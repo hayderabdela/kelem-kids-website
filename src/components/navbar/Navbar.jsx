@@ -5,7 +5,7 @@ import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import "./navbar.css";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({color}) => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [showLoginForm, setShowLoginForm] = useState(false);
   const loginFormRef = useRef();
@@ -41,7 +41,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar">
+    <div className="navbar" style={{backgroundColor:`${color}`}}>
       <div className="navbar-links">
         <div className="navbar-links_logo">
           <h1>KelemKids.</h1>
