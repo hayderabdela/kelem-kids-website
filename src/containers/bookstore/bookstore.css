@@ -1,3 +1,6 @@
+/* bookstore.css */
+
+/* Container styles */
 .bookstore-container {
     width: 100%;
     display: flex;
@@ -5,11 +8,46 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(to right top, #ffa07a, #87ceeb);
-        /* Gradient background */ 
+    background: #30ff93; /* Gradient background */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-}
+    gap: 100px;
+    
+    /* blue--010084 */
+    /* gold--ffd800 */
+  }
+  
+  
+  /* Hero section styles */
+  .hero {
+    width: 100%;
+    height: 500px; /* Adjust height as needed */
+    background-image: url('../../assets/game-hero.webp'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+
+  }
+  
+  /* Title animation */
+  .bookstore-title h1 {
+    font-weight: bold;
+    text-align: center;
+    margin: 30px;
+    animation: colorChange 10s infinite;
+  }
+  
+  .books-activity{
+    display: flex;
+  }
+  /* Rest of your existing CSS styles */
+  /* ... */
+  
+
 
 /* bookstore.css */
 

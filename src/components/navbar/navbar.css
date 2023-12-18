@@ -1,6 +1,6 @@
 .navbar {
     font-family: 'Boogaloo', sans-serif;
-    background-color: #b869c1;
+    /* background-color: #b869c1; */
     display: flex;
     justify-content: space-between;
     align-items: center;

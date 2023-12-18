@@ -7,7 +7,7 @@ import { Navbar, Footer, } from '../../components';
 const Home = () => {
   return (
     <div>
-      <Navbar />
+      <Navbar color="#b869c1"/>
       <Header />
       <ProgramSection />
       <JoinUs />

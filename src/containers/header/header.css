@@ -1,13 +1,13 @@
 
 .header {
-  background-image: url("../../assets/lp-hero.webp"); /* Replace with your image path */
+  background-image: url("../../assets/lp-hero1.webp"); /* Replace with your image path */
   background-size: cover;
   background-position: center;
-  height: 700px;
+  height: 600px;
   /* justify-content: space-between; */
   /* display: flex; */
   /* align-items: center; */
-  padding: 0.5rem 2rem;
+  /* padding: 0.5rem 2rem; */
   margin-top: 12rem;
 }
 
@@ -39,7 +39,7 @@
   font-weight: 450;
   font-size: 20px;
   line-height: 28px;
-  margin-top: 1.5rem;
+  /* margin-top: 1.5rem; */
 }
 
 .header-image {
