@@ -106,9 +106,14 @@
 }
 
 .error-message {
-    color: #e74c3c;
-    margin-top: 10px;
-    text-align: center;
-    font-size: 14px;
+    color: #ff4d4f;
+    /* Red color for error messages */
+    display: flex;
+    align-items: center;
+}
+
+.error-message i {
+    margin-right: 5px;
+    color: red;
 }
 

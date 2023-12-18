@@ -125,8 +125,12 @@ const LoginSignup = () => {
 
         <button type="submit">{isLogin ? "Login" : "Sign Up"}</button>
       </form>
-      {errorMessage && <p className="error-message">{errorMessage}</p>}
-      <p>
+        {errorMessage && (
+        <p className="error-message">
+          <i className="fas fa-exclamation-triangle"></i>
+          {errorMessage}
+        </p>
+      )}      <p>
         {isLogin ? "Don't have an account?" : "Already have an account?"}
         <button type="button" onClick={handleToggle}>
           {isLogin ? "Sign Up here" : "Login here"}

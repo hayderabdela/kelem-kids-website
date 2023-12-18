@@ -1,9 +1,14 @@
 /* parentdashboard.css */
 
 body {
-    margin: 0;
+margin: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
+    --primary-bg-color: #f0f0f0;
+    /* Light background color */
+    --secondary-bg-color: #333;
+    /* Dark background color */
+    background-color: var(--primary-bg-color);
+    color: #333;
 }
 
 .parent-dashboard {
@@ -13,8 +18,8 @@ body {
 
 .sidebar {
     width: 200px;
-    background-color: #6a1b9a;
-    /* Purple background color */
+    height: 100%;
+    background-color: var(--secondary-bg-color);     /* Purple background color */
     color: #fff;
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
@@ -60,9 +65,10 @@ body {
     flex-direction: column;
 }
 
-.header {
+.parent-dashboard .header {
     background-color: #fff;
     padding: 20px;
+    max-height: 70px;
     margin: 0;
     display: flex;
     justify-content: space-between;
@@ -75,21 +81,41 @@ body {
     height: 30px;
     border-radius: 50%;
     margin-right: 10px;
+    align-items: center;
 }
-/* parentdashboard.css */
 
+
+.logout {
+    background-color: #ff4081;
+    /* Pink */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.logout:hover {
+    background-color: #ff0055;
+    /* Darker pink on hover */
+}
 .child-details {
+    display: flex;
+    flex-direction: column;
     padding: 20px;
     background-color: #ffcc00;
     /* Vibrant yellow background */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
+    margin: 20px;
 }
 
-.child-details h2 {
+.child-details h3 {
     color: #333;
     font-size: 24px;
-    margin-bottom: 10px;
+    margin: 10px 10px 10px 0;
 }
 
 .user-profile img {
@@ -101,23 +127,37 @@ body {
 
 .progress-section {
     margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
 }
 
-.progress-item {
-    margin-bottom: 20px;
+.progress-item-content {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
 }
+.progress-item {
+    flex: 1 1 200px;
+    margin: 0 10px 20px 0;
+    padding: 15px;
+    background-color: #72c2f7;
+    /* Light blue background */
+    border-radius: 10px;}
 
 .progress-bar {
-    max-width:25%;
+    display: flex;
     background-color: #ddd;
     height: 20px;
     border-radius: 10px;
     overflow: hidden;
+    border-color: #f0f0f0;
+    max-width: 100%;
+    margin: 5px 5px 5px 0;
 }
 
-.progress-bar div {
+.progress-fill {
     height: 100%;
-    background-color: #ff4081;
+    background: linear-gradient(45deg, #ff4081, #ff0066);
     transition: width 0.5s ease;
 }
 
@@ -134,11 +174,46 @@ body {
 .activities ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .activities li {
     margin-bottom: 10px;
-    color: #666;
-    font-weight: bold;
-    font-size: 16px;
+    color: #fff;
+    font-size: 1.6rem;
+    background: linear-gradient(45deg, #2196f3, #007bb5);
+    /* Gradient from blue to dark blue */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 768px) {
+    .parent-dashboard .header{
+        flex-direction: row;
+    }
+    .child-details {
+        padding: 15px;
+    }
+
+    .progress-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .progress-bar,
+    .progress-bar div {
+        height: 15px;
+    }
+
+    .activities li {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 1050px){
+    .parent-dashboard .header{
+        flex-direction: row;
+    }
 }

@@ -173,14 +173,14 @@ body {
   transform: scale(1.1);
 }
 
-button {
+.vocabulary button {
   background-color: #e34561;
   padding: 14px 40px;
   border-radius: 10px;
   font-size: 30px;
 }
 
-button:hover {
+.vocabulary button:hover {
   background-color:#3498db;
   color: white;
   transform: scale(1.1);
