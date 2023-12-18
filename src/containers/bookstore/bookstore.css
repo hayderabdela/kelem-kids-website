@@ -115,6 +115,7 @@
 
 .category-buttons {
     display: flex;
+    justify-content: center;
     gap: 15px;
 }
 
@@ -148,15 +149,15 @@
     /* Change text color for active button */
 }
 
+.search-bar {
+    align-items: center;
+}
+
 .search-bar-container {
     margin-top: 10px;
 }
 
-.search-bar {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
+
 
 .search-bar input[type="text"] {
     padding: 8px;
@@ -234,3 +235,4 @@
     background-color: #ffc400;
     /* Slightly darker yellow on hover */
 }
+

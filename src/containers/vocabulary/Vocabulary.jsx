@@ -16,15 +16,16 @@ const Vocabulary = () => {
       { name: 'koala', image: 'images/animals/koala.jpg', audio: 'images/animals/koala.mp3' },
       { name: 'monkey', image: 'images/animals/monkey.jpg', audio: 'images/animals/monkey.mp3' },
       { name: 'ship', image: 'images/transportation/ship.jpg', audio: 'images/transportation/ship.mp3' },
-      { name: 'watermelon', image: 'images/fruits/watermelon.jpg', audio: 'images/fruits/watermelon.mp3' },
-      { name: 'pineapple', image: 'images/fruits/pineapple.jpg', audio: 'images/fruits/pineapple.mp3' },
       { name: 'lion', image: 'images/animals/lion.jpg', audio: 'images/animals/lion.mp3' },
       { name: 'giraffe', image: 'images/animals/giraffe.jpg', audio: 'images/animals/giraffe.mp3' },
-      { name: 'bicycle',image: 'images/transportation/bicycle.jpg', audio: 'images/transportation/bicycle.mp3' },
+      { name: 'bicycle', image: 'images/transportation/bicycle.jpg', audio: 'images/transportation/bicycle.mp3' },
+      { name: 'pineapple', image: 'images/fruits/pineapple.jpg', audio: 'images/fruits/pineapple.mp3' },
       { name: 'bus', image: 'images/transportation/bus.jpg', audio: 'images/transportation/bus.mp3' },
       { name: 'penguine', image: 'images/animals/penguine.jpg', audio: 'images/animals/penguine.mp3' },
-      { name: 'car', image: 'images/transportation/car.jpg', audio: 'images/transportation/car.mp3' },
+      { name: 'car', image: 'images/transportation/car.jpg', audio: 'images/transportation/car.mp3' },      
       { name: 'helicopter', image: 'images/transportation/helicopter.jpg', audio: 'images/transportation/helicopter.mp3' },
+      { name: 'watermelon', image: 'images/fruits/watermelon.jpg', audio: 'images/fruits/watermelon.mp3' },
+
       
       // Add more words with image and audio properties
     ],

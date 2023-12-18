@@ -189,6 +189,12 @@ margin: 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+@media screen and (max-width: 1050px) {
+    .parent-dashboard .header {
+        flex-direction: row;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .parent-dashboard .header{
         flex-direction: row;
@@ -212,8 +218,18 @@ margin: 0;
     }
 }
 
-@media screen and (max-width: 1050px){
-    .parent-dashboard .header{
-        flex-direction: row;
+@media screen and (max-width: 680px) {
+    .parent-dashboard {
+        .child-details{
+            height: 850px;
+        }
+    }
+
+    .progress-section{
+        display: flex;
+        flex-direction: column;
+    }
+    .progress-item{
+        flex: 0;
     }
 }

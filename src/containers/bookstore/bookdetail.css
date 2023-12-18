@@ -1,7 +1,7 @@
 /* Update your existing bookstore.css or create a new CSS file */
 
 .book-details-page {
-  height: 700px;
+  height: auto;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -66,3 +66,8 @@
 }
 
 /* Add more styles as needed based on your preferences */
+@media screen and (max-width: 680px){
+  .book-details-page{
+    height:900px;
+  }
+}
