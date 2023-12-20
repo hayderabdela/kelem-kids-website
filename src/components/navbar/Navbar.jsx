@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef} from "react";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
-// import logo from "../../assets/kelemkids-logos_transparent.png"
+import logo from "../../assets/kelemlogo.png"
 
 import "./navbar.css";
 import { Link } from "react-router-dom";
@@ -44,7 +44,7 @@ const Navbar = ({color}) => {
     <div className="navbar" style={{backgroundColor:`${color}`}}>
       <div className="navbar-links">
         <div className="navbar-links_logo">
-          <h1>KelemKids.</h1>
+        <img src={logo} alt="Logo" />
         </div>
         <div className="navbar-links_container">
           <p >
