@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./loginsignup.css";
 
 const LoginSignup = () => {
@@ -8,6 +9,10 @@ const LoginSignup = () => {
   const [email, setEmail] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const [successMessage, setSuccessMessage] = useState(""); // Add this line
+
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Check if user is coming back from dashboard
@@ -27,6 +32,7 @@ const LoginSignup = () => {
     setPassword("");
     setEmail("");
     setErrorMessage("");
+    setSuccessMessage("");
   };
 
   const handlePasswordToggle = () => {
@@ -58,11 +64,14 @@ const LoginSignup = () => {
 
         if (isLogin) {
           localStorage.setItem("token", data.token);
+          localStorage.setItem("username", username); // Store the username
           sessionStorage.setItem("loggedIn", "true"); // Set the flag
-          window.location.href = "/parentdashboard";
+          navigate("/parentdashboard");
         } else {
           console.log("User registered successfully");
-          window.location.href = "/login-signup";
+          // navigate("/login-signup");
+          setSuccessMessage("Registration successful! Please login.");
+
         }
       } else {
         const errorData = await response.json();
@@ -125,12 +134,19 @@ const LoginSignup = () => {
 
         <button type="submit">{isLogin ? "Login" : "Sign Up"}</button>
       </form>
-        {errorMessage && (
+      {errorMessage && (
         <p className="error-message">
           <i className="fas fa-exclamation-triangle"></i>
           {errorMessage}
         </p>
-      )}      <p>
+      )}
+            {successMessage && (
+        <p className="success-message">
+          <i className="fas fa-check-circle"></i>
+          {successMessage}
+        </p>
+      )}
+      <p>
         {isLogin ? "Don't have an account?" : "Already have an account?"}
         <button type="button" onClick={handleToggle}>
           {isLogin ? "Sign Up here" : "Login here"}

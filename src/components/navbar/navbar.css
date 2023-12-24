@@ -144,11 +144,11 @@ a {
 }
 
 .navbar-menu_container {
+    background-color: rgb(191, 106, 198);
     display: flex;
     justify-content: flex-end;
-    align-items: flex-end;
+    /* align-items: flex-end; */
     flex-direction: column;
-
     text-align: end;
     padding: 2rem;
     position: absolute;
@@ -157,7 +157,7 @@ a {
     margin-top: 1rem;
     min-width: 210px;
     border-radius: 5px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.9);
 }
 
 .navbar-menu_container p {
@@ -169,7 +169,7 @@ a {
     text-transform: capitalize;
     font-family: 'Times New Roman', Times, serif;
     padding: 10px;
-    color: black;
+    color: yellow;
     transition: color 0.3s;
     border-radius: 25px;
     float: left;

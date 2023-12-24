@@ -145,8 +145,9 @@ video {
 
 
 /* Media Query for Responsiveness */
-@media screen and (min-width: 768px) {
-    .video-store {
+@media screen and (min-width: 680px) {
+    .all-video {
+        display: flexbox;
     }
 
     .video-item {

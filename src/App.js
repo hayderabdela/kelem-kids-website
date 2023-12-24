@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import { Home, LoginSignup, Navbar, ParentDashboard } from "./components";
+import { Home, LoginSignup, Navbar, ParentDashboard, Footer } from "./components";
 import {
   Header,
   BookStore,
@@ -11,23 +11,33 @@ import {
   Vocabulary,
 } from "./containers";
 import BookDetails from "./containers/bookstore/BookDetail";
-// import { Navbar } from "react-bootstrap";
+
 
 function App() {
   return (
     <div className="App">
-    
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/header" element={<Header />} />
+        <Route
+          path="/header"
+          element={
+            <div>
+              <Navbar color="#30ff93" />
+              <Header />
+              <Footer />
+            </div>
+          }
+        />
         <Route path="/games" element={<Games />} />
-        <Route path="/bookstore" element={
-
-          <div>
-            <Navbar color="#30ff93"/>
-            <BookStore />
-          </div>}
-         />
+        <Route
+          path="/bookstore"
+          element={
+            <div>
+              <Navbar color="#30ff93" />
+              <BookStore />
+            </div>
+          }
+        />
         <Route path="/bookstore/:bookId" element={<BookDetails />} />
         <Route path="/videostore" element={<VideoStore />} />
         <Route path="/vocabulary" element={<Vocabulary />} />

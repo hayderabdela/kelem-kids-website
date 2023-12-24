@@ -127,6 +127,7 @@
   .header-content{
     padding: 3rem;
     height: 400px;
+    width: 550px;
   }
   .header-content h1 {
     font-size: 38px;
@@ -134,9 +135,11 @@
   }
 
   .header-content p {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 24px;
+    padding: 5px;
   }
+
 
   .header-image {
     width: 75%;

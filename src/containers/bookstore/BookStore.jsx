@@ -9,28 +9,56 @@ const books = [
     id: 1,
     title: "The Magical Adventures",
     author: "Lily Meadows",
-    cover: require("../../assets/arrival_1.jpg"),
-    category: "academic", // Corrected property name
-  },
-  {
-    id: 2,
-    title: "Wonderful Stories for Kids",
-    author: "Celeste Moonlight",
-    cover: require("../../assets/acadamic-2.jpg"),
+    cover: require("../../assets/story-1.jpg"),
     category: "story", // Corrected property name
   },
   {
+    id: 2,
+    title: "Language Fundamentals",
+    author: "Celeste Moonlight",
+    cover: require("../../assets/acadamic-2.jpg"),
+    category: "academic", // Corrected property name
+  },
+  {
     id: 3,
-    title: "The Magical Adventures",
-    author: "Lily Meadows",
-    cover: require("../../assets/story-1.jpg"),
+    title: "The Holy Quran",
+    author: "",
+    cover: require("../../assets/book_11.jpg"),
     category: "religious", // Corrected property name
   },
   {
     id: 4,
-    title: "The Dancing Stars",
+    title: "The Kid With The Ball",
+    author: "Anthony Curcio",
+    cover: require("../../assets/book_18.jpg"),
+    category: "sport", // Corrected property name
+  },
+    {
+    id: 5,
+    title: "Kids Science Book",
+    author: "Lily Meadows",
+    cover: require("../../assets/acadamic-5.jpg"),
+    category: "academic", // Corrected property name
+  },
+  {
+    id: 6,
+    title: "Wonderful Stories for Kids",
     author: "Celeste Moonlight",
-    cover: require("../../assets/story-2.jpg"),
+    cover: require("../../assets/story-4.jpg"),
+    category: "story", // Corrected property name
+  },
+  {
+    id: 7,
+    title: "The Holy Bible",
+    author: "",
+    cover: require("../../assets/book_14.jpg"),
+    category: "religious", // Corrected property name
+  },
+  {
+    id: 8,
+    title: "The Stars",
+    author: "Ben Byde",
+    cover: require("../../assets/book_17.jpg"),
     category: "sport", // Corrected property name
   },
   // Add more books as needed with different categories
