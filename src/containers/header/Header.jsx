@@ -12,7 +12,7 @@ const Header = () => (
         Explore a world of fun and learning designed just for kids. Our
         interactive platform engages young minds with educational games,
         creative activities, and exciting lessons. KelemKids is not just a
-        website .🌟
+        website.🌟
       </p>
       <div className="header-button">
         <a href="#about">

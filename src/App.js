@@ -28,7 +28,13 @@ function App() {
             </div>
           }
         />
-        <Route path="/games" element={<Games />} />
+        <Route path="/games" element={
+        <div>
+        <Navbar color="#ffd800" />
+        <Games />
+        </div>
+        } 
+        />
         <Route
           path="/bookstore"
           element={
@@ -39,9 +45,33 @@ function App() {
           }
         />
         <Route path="/bookstore/:bookId" element={<BookDetails />} />
-        <Route path="/videostore" element={<VideoStore />} />
-        <Route path="/vocabulary" element={<Vocabulary />} />
-        <Route path="/facts" element={<Facts />} />
+        <Route
+          path="/videostore"
+          element={
+            <div>
+              <Navbar color="#30ff93" />
+              <VideoStore />
+            </div>
+          }
+        />
+         <Route
+          path="/vocabulary"
+          element={
+            <div>
+              <Navbar color="#30ff93" />
+              <Vocabulary />
+            </div>
+          }
+        />
+        <Route
+          path="/facts"
+          element={
+            <div>
+              <Navbar color="#30ff93" />
+              <Facts />
+            </div>
+          }
+        />
         <Route path="/login-signup" element={<LoginSignup />} />
         <Route path="/parentdashboard" element={<ParentDashboard />} />
       </Routes>

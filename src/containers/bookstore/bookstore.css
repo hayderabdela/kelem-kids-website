@@ -22,7 +22,7 @@
   .hero {
     width: 100%;
     height: 500px; /* Adjust height as needed */
-    background-image: url('../../assets/game-hero.webp'); /* Replace with your image path */
+    background-image: url('../../assets/books-hero.webp'); /* Replace with your image path */
     background-size: cover;
     background-position: center;
     display: flex;

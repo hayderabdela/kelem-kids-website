@@ -33,7 +33,7 @@ const books = [
     cover: require("../../assets/book_18.jpg"),
     category: "sport", // Corrected property name
   },
-    {
+  {
     id: 5,
     title: "Kids Science Book",
     author: "Lily Meadows",
@@ -92,70 +92,53 @@ const BookStore = () => {
 
       {/* Content section below the hero */}
       <div className="books-activity">
-      <div className="content">
-        <div className="category-selector">
-          <div className="category-buttons">
-          {["all", "academic", "story", "sport", "religious"].map((category) => (
-            <button
-              key={category}
-              onClick={() => handleCategoryButtonClick(category)}
-              className={`category-button ${selectedCategory === category ? "active" : ""}`}
-            >
-              {category === "all" ? "All Books" : category.charAt(0).toUpperCase() + category.slice(1)}
-            </button>
-          ))}
-          </div>
-        </div>
-        <div className="search-bar">
-           <label>Search by Title:</label>
-          <input
-            type="text"
-            placeholder="Enter title..."
-            value={searchTerm}
-            onChange={handleSearchInputChange}
-        />
-
-        </div>
-        <div className="books">
-        {filteredBooks.map((book) => (
-          <div key={book.id} className="book-card">
-            <img src={book.cover} alt={book.title} className="book-cover" />
-            <div className="book-details">
-              <h3 className="book-title">{book.title}</h3>
-              <p className="book-author">By {book.author}</p>
+        <div className="content">
+          <div className="category-selector">
+            <div className="category-buttons">
+              {["all", "academic", "story", "sport", "religious"].map(
+                (category) => (
+                  <button
+                    key={category}
+                    onClick={() => handleCategoryButtonClick(category)}
+                    className={`category-button ${
+                      selectedCategory === category ? "active" : ""
+                    }`}
+                  >
+                    {category === "all"
+                      ? "All Books"
+                      : category.charAt(0).toUpperCase() + category.slice(1)}
+                  </button>
+                )
+              )}
             </div>
-            <Link to={`/bookstore/${book.id}`} className="book-link">
-              Explore
-            </Link>
           </div>
-        ))}
-
+          <div className="search-bar">
+            <label>Search by Title:</label>
+            <input
+              type="text"
+              placeholder="Enter title..."
+              value={searchTerm}
+              onChange={handleSearchInputChange}
+            />
+          </div>
+          <div className="books">
+            {filteredBooks.map((book) => (
+              <div key={book.id} className="book-card">
+                <img src={book.cover} alt={book.title} className="book-cover" />
+                <div className="book-details">
+                  <h3 className="book-title">{book.title}</h3>
+                  <p className="book-author">By {book.author}</p>
+                </div>
+                <Link to={`/bookstore/${book.id}`} className="book-link">
+                  Explore
+                </Link>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-
       </div>
     </div>
   );
 };
 
 export default BookStore;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
