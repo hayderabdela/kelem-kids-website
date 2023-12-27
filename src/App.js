@@ -89,7 +89,7 @@ function App() {
           }
         />
         <Route path="/login-signup" element={<LoginSignup />} />
-        <Route path="/parentdashboard" element={<ParentDashboard />} />
+        <Route path="/parentdashboard" element={<ParentDashboard  /> } />
       </Routes>
     </div>
   );
