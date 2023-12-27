@@ -1,7 +1,13 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import { Home, LoginSignup, Navbar, ParentDashboard, Footer } from "./components";
+import {
+  Home,
+  LoginSignup,
+  Navbar,
+  ParentDashboard,
+  Footer,
+} from "./components";
 import {
   Header,
   BookStore,
@@ -11,7 +17,9 @@ import {
   Vocabulary,
 } from "./containers";
 import BookDetails from "./containers/bookstore/BookDetail";
-
+import RockPaperScissors from "./containers/games/RockPaperScissors";
+import TicTacToe from "./containers/games/TicTacToe";
+import Puzzle from "./containers/games/Puzzle";
 
 function App() {
   return (
@@ -28,13 +36,21 @@ function App() {
             </div>
           }
         />
-        <Route path="/games" element={
-        <div>
-        <Navbar color="#ffd800" />
-        <Games />
-        </div>
-        } 
+        <Route
+          path="/games"
+          element={
+            <div>
+              <Navbar color="#ffd800" />
+              <Games />
+            </div>
+          }
         />
+        <Route
+          path="/games/RockPaperScissors"
+          element={<RockPaperScissors />}
+        />
+        <Route path="/games/TicTacToe" element={<TicTacToe />} />
+        <Route path="/games/puzzle" element={<Puzzle />} />
         <Route
           path="/bookstore"
           element={
@@ -54,7 +70,7 @@ function App() {
             </div>
           }
         />
-         <Route
+        <Route
           path="/vocabulary"
           element={
             <div>

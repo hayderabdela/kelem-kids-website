@@ -1,26 +1,31 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./games.css";
-import { Games } from "..";
+import RockPaperScissors from "./RockPaperScissors";
+import TicTacToe from "./TicTacToe";
+import Puzzle from "./Puzzle";
 
 const games = [
   {
     id: 1,
-    title: "Rock-Paper-Scissor",
+    title: "RockPaperScissors",
     cover: require("../../assets/rock-paper-scissor-card.webp"),
+    component: RockPaperScissors,
   },
   {
     id: 2,
-    title: "tic-tac-toe",
+    title: "TicTacToe",
     cover: require("../../assets/xo-card.webp"),
+    component: TicTacToe,
   },
   {
     id: 3,
     title: "Puzzle",
     cover: require("../../assets/puzzle-card.webp"),
+    component: Puzzle,
   },
-  // Add more books as needed with different categories
 ];
+
 const GameStore = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [searchTerm, setSearchTerm] = useState("");
@@ -36,17 +41,11 @@ const GameStore = () => {
   );
 
   return (
-    // Added 'return' here to render the JSX content
     <div className="game-container">
-      {/* Hero section with background image */}
       <div className="game-hero">
         <h1>Welcome to the Kids Games</h1>
-        {/* Other content or elements in the hero section */}
       </div>
-      {/* Content section below the hero */}
       <div className="games-activity">
-        {" "}
-        {/* Corrected class name from 'books-activity' to 'games-activity' */}
         <div className="content">
           <div className="search-bar">
             <label>Search by Title:</label>
@@ -59,29 +58,17 @@ const GameStore = () => {
           </div>
         </div>
       </div>
-      {/* Display filtered games */}
-      {/* <div className="games-list">
+      <div className="games-list">
         {filteredGames.map((game) => (
-          <div key={game.id}>
+          <div key={game.id} className="game-card">
             <h2>{game.title}</h2>
-            <img src={game.cover} alt={game.title} />
+            <img src={game.cover} alt={game.title} className="game-cover" />
+            <Link to={`/games/${game.title.replace(/\s+/g, "-")}`} className="game-link">
+              Explore
+            </Link>
           </div>
         ))}
-      </div> */}
-      <div className="books">
-            {filteredGames.map((game) => (
-              <div key={game.id} className="game-card">
-                <img src={game.cover} alt={game.title} className="game-cover" />
-                <div className="game-details">
-                  <h3 className="game-title">{game.title}</h3>
-                </div>
-                {/* <Link to={`/bookstore/${book.id}`} className="book-link">
-                  Explore
-                </Link> */}
-              </div>
-            ))}
-          </div>
-
+      </div>
     </div>
   );
 };
