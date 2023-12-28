@@ -65,7 +65,7 @@ const factsList = [
       'The smallest country in the world is the Vatican City in Rome, Italy. It is only about 109 acres.',
       // Add more space facts
     ],
-    image: 'geography-fact.jpg',
+    image: '../../assets/bg1.png',
   }, 
 ];
 
@@ -74,19 +74,29 @@ const factsList = [
 const Facts = () => {
   const [currentFact, setCurrentFact] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const [loading, setLoading] = useState(false);
 
-  const filteredFacts = selectedCategory === 'All'
-    ? factsList.reduce((allFacts, category) => allFacts.concat(category.facts || []), [])
-    : factsList.filter(fact => fact.category === selectedCategory);
+  const getAllFacts = () => factsList.flatMap(category => category.facts || []);
+
+  const getFilteredFacts = () => {
+    return selectedCategory === 'All'
+      ? getAllFacts()
+      : factsList.find(fact => fact.category === selectedCategory)?.facts || [];
+  };
+
+  const generateRandomFact = () => {
+    setLoading(true);
+    setTimeout(() => {
+      const filteredFacts = getFilteredFacts();
+      const randomIndex = Math.floor(Math.random() * filteredFacts.length);
+      setCurrentFact(filteredFacts[randomIndex]);
+      setLoading(false);
+    }, 1000); // Simulating a delay for loading effect
+  };
 
   useEffect(() => {
     generateRandomFact();
-  }, [filteredFacts]);
-
-  const generateRandomFact = () => {
-    const randomIndex = Math.floor(Math.random() * filteredFacts.length);
-    setCurrentFact(filteredFacts[randomIndex]);
-  };
+  }, [selectedCategory]);
 
   const handleCategoryChange = (e) => {
     setSelectedCategory(e.target.value);
@@ -104,27 +114,27 @@ const Facts = () => {
         <option value="Geography Fact">Geography Fact</option>
         <option value="Football Fact">Football Fact</option>
       </select>
-      {currentFact && (
-        <div>
-          <h3>{currentFact.category}</h3>
-          {Array.isArray(currentFact.facts) ? (
-            currentFact.facts.map((fact, index) => (
-              <p key={index}>{fact}</p>
-            ))
-          ) : (
-            <>
-
-              <p>{currentFact.text}</p>
-            </>
-          )}
-        </div>
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
+        currentFact && (
+          <div>
+            <h3>{currentFact.category}</h3>
+            {Array.isArray(currentFact) ? (
+              currentFact.map((fact, index) => (
+                <p key={index}>{fact}</p>
+              ))
+            ) : (
+              <p>{currentFact}</p>
+            )}
+          </div>
+        )
       )}
       <button className="generate-button" onClick={generateRandomFact}>
-        Generate Fact
+        {loading ? 'Generating...' : 'Generate Fact'}
       </button>
     </div>
   );
 };
 
 export default Facts;
-

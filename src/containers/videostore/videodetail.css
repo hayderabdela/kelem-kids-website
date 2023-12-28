@@ -1,6 +1,6 @@
 /* VideoDetail.css */
 
-body {
+.video-detail-container body {
     margin: 0;
     padding: 0;
     background-color: #222;
@@ -11,8 +11,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     height: 100vh;
+    justify-content: center;
     overflow: hidden;
 }
 
