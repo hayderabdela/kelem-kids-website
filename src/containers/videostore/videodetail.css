@@ -1,0 +1,64 @@
+/* VideoDetail.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+    font-family: 'Arial', sans-serif;
+}
+
+.video-detail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-detail-content {
+    position: relative;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.video-detail-content video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.video-detail-content h1 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.video-detail-content p {
+    color: #666;
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.video-detail-content .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    color: #333;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .video-detail-content {
+        width: 90%;
+    }
+}

@@ -3,6 +3,7 @@
         {
             "asset_id": "b25a6668357bd7df9ec8633b426ebe5a",
             "public_id": "kids-video/acfvhyluvg4jds3m320x",
+            "id" : "acfvhyluvg4jds3m320x",
             "format": "mp4",
             "version": 1702629400,
             "title": "Magic Quest",
@@ -21,6 +22,7 @@
         {
             "asset_id": "2537f2e40fce986d184106e490f5fb10",
             "public_id": "kids-video/ptbc9wulgtsewiohusw4",
+            "id" : "ptbc9wulgtsewiohusw4",
             "format": "mp4",
             "version": 1702629392,
             "title": "ABC Adventure",
@@ -39,6 +41,7 @@
         {
             "asset_id": "ae5da903a25082d65f4cd6efc27bad8e",
             "public_id": "kids-video/alsqctadj55poye1r8bj",
+            "id" : "alsqctadj55poye1r8bj",
             "format": "mp4",
             "version": 1702629392,
             "title": "Playful Sports Zone",
@@ -57,6 +60,7 @@
         {
             "asset_id": "bbb8113e213ef0286858a420afc2cb61",
             "public_id": "kids-video/n0nxakd14anejgah2kfj",
+            "id" : "n0nxakd14anejgah2kfj",
             "format": "mp4",
             "version": 1702629392,
             "title": "Creative Art Studio",
@@ -75,6 +79,7 @@
         {
             "asset_id": "5dacb47d233afa122b18e313dcc2301c",
             "public_id": "kids-video/cvuctfv8rxglsyfsvwgg",
+            "id" : "cvuctfv8rxglsyfsvwgg",
             "format": "mp4",
             "version": 1702629391,
             "title": "Giggle Fest",
@@ -93,6 +98,7 @@
         {
             "asset_id": "86d36f0fd6fc057ecdf46e569b558b0c",
             "public_id": "kids-video/jc95i93jkjznepnvwv37",
+            "id" : "jc95i93jkjznepnvwv37",
             "format": "mp4",
             "version": 1702629390,
             "title": "Adventure Time with Mr. Bear",

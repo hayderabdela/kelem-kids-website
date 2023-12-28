@@ -20,6 +20,7 @@ import BookDetails from "./containers/bookstore/BookDetail";
 import RockPaperScissors from "./containers/games/RockPaperScissors";
 import TicTacToe from "./containers/games/TicTacToe";
 import Puzzle from "./containers/games/Puzzle";
+import VideoDetail from "./containers/videostore/VideoDetail";
 
 function App() {
   return (
@@ -70,6 +71,7 @@ function App() {
             </div>
           }
         />
+        <Route path="/videostore/:videoId" element={<VideoDetail />} />
         <Route
           path="/vocabulary"
           element={
@@ -89,7 +91,7 @@ function App() {
           }
         />
         <Route path="/login-signup" element={<LoginSignup />} />
-        <Route path="/parentdashboard" element={<ParentDashboard  /> } />
+        <Route path="/parentdashboard" element={<ParentDashboard />} />
       </Routes>
     </div>
   );
