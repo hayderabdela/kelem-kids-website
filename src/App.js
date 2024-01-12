@@ -51,7 +51,7 @@ function App() {
           element={<RockPaperScissors />}
         />
         <Route path="/games/TicTacToe" element={<TicTacToe />} />
-        <Route path="/games/puzzle" element={<Puzzle />} />
+        <Route path="/games/Puzzle" element={<Puzzle />} />
         <Route
           path="/bookstore"
           element={

@@ -1,0 +1,28 @@
+.rps-game-container {
+    text-align: center;
+    margin-top: 50px;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    font-size: 2em;
+  }
+  
+  .choices {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  img {
+    margin: 0 10px;
+    width: 300px; /* Adjust size as needed */
+    height: 300px; /* Adjust size as needed */
+    cursor: pointer;
+  }
+  
+  .result {
+    margin-top: 20px;
+    font-size: 1.2em;
+  }
+  
