@@ -22,8 +22,6 @@ import RockPaperScissors from "./containers/games/RockPaperScissors";
 import TicTacToe from "./containers/games/TicTacToe";
 import Puzzle from "./containers/games/Puzzle";
 import VideoDetail from "./containers/videostore/VideoDetail";
-import BookList from "./containers/bookstore/bookList";
-import PdfViewer from "./containers/bookstore/pdfViewer";
 import BookDetails from "./containers/bookstore/BookDetail";
 
 function App() {
