@@ -1,0 +1,49 @@
+/* Help.css */
+
+.help-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    text-align: center;
+}
+
+.title {
+    color: #007bff;
+}
+
+.description {
+    color: #495057;
+}
+
+.contact-options {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.contact-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact-option:hover {
+    transform: scale(1.1);
+}
+
+.icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #007bff;
+    transition: color 0.3s ease-in-out;
+}
+
+.contact-option:hover .icon {
+    color: #0056b3;
+}

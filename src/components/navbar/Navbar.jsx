@@ -54,13 +54,13 @@ const Navbar = ({color}) => {
             <a href="/header">About</a>
           </p>
           <p>
-            <a href="#service">Service</a>
+            <a href="/service">Service</a>
           </p>
           <p>
-            <a href="#help">Help</a>
+            <a href="/help">Help</a>
           </p>
           <p>
-            <a href="#contact">Contact</a>
+            <a href="/contact">Contact</a>
           </p>
         </div>
       </div>
