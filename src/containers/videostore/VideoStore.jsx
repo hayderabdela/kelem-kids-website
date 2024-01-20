@@ -6,6 +6,7 @@ import videoData from "./../../video.json";
 import { Link } from "react-router-dom";
 
 const VideoList = () => {
+  // eslint-disable-next-line no-unused-vars
   const [videolist, setVideoList] = useState(videoData.resources);
   const [selectedGenre, setSelectedGenre] = useState("all");
   const [searchTerm, setSearchTerm] = useState("");

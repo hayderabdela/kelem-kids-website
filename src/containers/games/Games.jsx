@@ -27,6 +27,7 @@ const games = [
 ];
 
 const GameStore = () => {
+  // eslint-disable-next-line no-unused-vars
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [searchTerm, setSearchTerm] = useState("");
 

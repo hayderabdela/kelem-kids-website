@@ -96,6 +96,7 @@ const Facts = () => {
 
   useEffect(() => {
     generateRandomFact();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedCategory]);
 
   const handleCategoryChange = (e) => {
