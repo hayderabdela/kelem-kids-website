@@ -21,7 +21,7 @@ const VideoDetail = ({ onClose }) => {
           &times;
         </span>
         <h1>{selectedVideo.title}</h1>
-        <video controls width="100%" height="auto">
+        <video controls width="90%" height="auto">
           <source src={selectedVideo.url} type={`video/${selectedVideo.format}`} />
           Your browser does not support the video tag.
         </video>
