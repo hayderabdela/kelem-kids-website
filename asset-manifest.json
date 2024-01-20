@@ -1,22 +1,34 @@
 {
   "files": {
-    "main.css": "/kelem-kids-website/static/css/main.5996ab8b.css",
-    "main.js": "/kelem-kids-website/static/js/main.d4a785a7.js",
-    "static/js/787.f5e50e7e.chunk.js": "/kelem-kids-website/static/js/787.f5e50e7e.chunk.js",
+    "main.css": "/kelem-kids-website/static/css/main.1bb3bfe5.css",
+    "main.js": "/kelem-kids-website/static/js/main.6170884d.js",
+    "static/js/496.085ce618.chunk.js": "/kelem-kids-website/static/js/496.085ce618.chunk.js",
     "static/media/avater1.jpg": "/kelem-kids-website/static/media/avater1.c6066bfe8de248f8b190.jpg",
-    "static/media/kid7.png": "/kelem-kids-website/static/media/kid7.8aebcf72c4958c58f8d8.png",
-    "static/media/story-2.jpg": "/kelem-kids-website/static/media/story-2.482e786a174f41780acd.jpg",
-    "static/media/arrival_1.jpg": "/kelem-kids-website/static/media/arrival_1.d1948ace75206eaa944a.jpg",
+    "static/media/games-hero.webp": "/kelem-kids-website/static/media/games-hero.af99b3b0aa0ae5ed8b8c.webp",
+    "static/media/books-hero.webp": "/kelem-kids-website/static/media/books-hero.4f34d10ffa40fb7af1d9.webp",
+    "static/media/book_14.jpg": "/kelem-kids-website/static/media/book_14.ff12c8bc863c6b4b0375.jpg",
+    "static/media/acadamic-5.jpg": "/kelem-kids-website/static/media/acadamic-5.5fa0ef9269049353df34.jpg",
+    "static/media/story-4.jpg": "/kelem-kids-website/static/media/story-4.0672a77ec632a084dd57.jpg",
+    "static/media/book_11.jpg": "/kelem-kids-website/static/media/book_11.1094ad22f24d5ac84e49.jpg",
+    "static/media/lp-hero1.webp": "/kelem-kids-website/static/media/lp-hero1.2e0f1e34451113b9b73f.webp",
+    "static/media/scissor.png": "/kelem-kids-website/static/media/scissor.022476c8864133c77f8a.png",
+    "static/media/rock.png": "/kelem-kids-website/static/media/rock.357fb8ee79c3920dffda.png",
     "static/media/acadamic-2.jpg": "/kelem-kids-website/static/media/acadamic-2.8342b009c360b3e66c5c.jpg",
+    "static/media/paper.png": "/kelem-kids-website/static/media/paper.a2550ba63ad2b7da15df.png",
+    "static/media/rock-paper-scissor-card.webp": "/kelem-kids-website/static/media/rock-paper-scissor-card.87fcab54e83bda181d71.webp",
+    "static/media/puzzle-card.webp": "/kelem-kids-website/static/media/puzzle-card.8e11927953119777c32a.webp",
     "static/media/story-1.jpg": "/kelem-kids-website/static/media/story-1.1c8e62216fe18123d933.jpg",
-    "static/media/kelemkids-logos_transparent.png": "/kelem-kids-website/static/media/kelemkids-logos_transparent.af86462da6448ae0eaab.png",
+    "static/media/book_17.jpg": "/kelem-kids-website/static/media/book_17.871b3442bb4792eb4225.jpg",
+    "static/media/book_18.jpg": "/kelem-kids-website/static/media/book_18.859ed316a5a5c9151044.jpg",
+    "static/media/xo-card.webp": "/kelem-kids-website/static/media/xo-card.4bea6b2d0e2335d7ff91.webp",
+    "static/media/kelemlogo.png": "/kelem-kids-website/static/media/kelemlogo.6df3cffcba51c024865a.png",
     "index.html": "/kelem-kids-website/index.html",
-    "main.5996ab8b.css.map": "/kelem-kids-website/static/css/main.5996ab8b.css.map",
-    "main.d4a785a7.js.map": "/kelem-kids-website/static/js/main.d4a785a7.js.map",
-    "787.f5e50e7e.chunk.js.map": "/kelem-kids-website/static/js/787.f5e50e7e.chunk.js.map"
+    "main.1bb3bfe5.css.map": "/kelem-kids-website/static/css/main.1bb3bfe5.css.map",
+    "main.6170884d.js.map": "/kelem-kids-website/static/js/main.6170884d.js.map",
+    "496.085ce618.chunk.js.map": "/kelem-kids-website/static/js/496.085ce618.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5996ab8b.css",
-    "static/js/main.d4a785a7.js"
+    "static/css/main.1bb3bfe5.css",
+    "static/js/main.6170884d.js"
   ]
 }
