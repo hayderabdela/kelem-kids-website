@@ -82,12 +82,12 @@ const PuzzleGallery = () => {
     ten,
     ten1,
     ten2,
-    ten3
+    ten3,
   ];
   const { data, handleImageChange } = useData();
   useEffect(() => {
     handleImageChange(datas);
-    console.log("the data from context", data);
+    // console.log("the data from context", data);
   }, []);
 };
 

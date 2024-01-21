@@ -27,6 +27,7 @@ import VideoDetail from "./containers/videostore/VideoDetail";
 import BookDetails from "./containers/bookstore/BookDetail";
 import ContactUs from "./containers/contact/Contact";
 import Help from "./containers/help/Help";
+import Puzzle from "./containers/games/puzzle.jsx";
 
 function App() {
   return (
@@ -90,8 +91,11 @@ function App() {
           path="/games/Puzzle"
           element={
             <div>
+              <DataProvider >
+                <Puzzle/>
               <PuzzleGallery />
-              <DataProvider />
+
+              </DataProvider>
     </div>
   }
 />
