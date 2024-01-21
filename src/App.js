@@ -20,7 +20,8 @@ import {
 // import BookDetails from "./containers/bookstore/BookDetail";
 import RockPaperScissors from "./containers/games/RockPaperScissors";
 import TicTacToe from "./containers/games/TicTacToe";
-import Puzzle from "./containers/games/Puzzle";
+import { DataProvider } from "./context/DataContext.jsx";
+import PuzzleGallery from "./containers/games/PuzzleGallery";
 import VideoDetail from "./containers/videostore/VideoDetail";
 import BookDetails from "./containers/bookstore/BookDetail";
 
@@ -53,7 +54,16 @@ function App() {
           element={<RockPaperScissors />}
         />
         <Route path="/games/TicTacToe" element={<TicTacToe />} />
-        <Route path="/games/Puzzle" element={<Puzzle />} />
+        <Route
+          path="/games/Puzzle"
+          element={
+            <div>
+              <PuzzleGallery />
+              <DataProvider />
+    </div>
+  }
+/>
+
         <Route
           path="/bookstore"
           element={

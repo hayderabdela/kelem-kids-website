@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./games.css";
 import RockPaperScissors from "./RockPaperScissors";
 import TicTacToe from "./TicTacToe";
-import Puzzle from "./Puzzle";
+import Puzzle from "./PuzzleGallery";
 
 const games = [
   {
