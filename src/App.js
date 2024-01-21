@@ -16,6 +16,7 @@ import {
   VideoStore,
   Vocabulary,
   BookStore,
+  ProgramSection,
 } from "./containers";
 // import BookDetails from "./containers/bookstore/BookDetail";
 import RockPaperScissors from "./containers/games/RockPaperScissors";
@@ -24,6 +25,8 @@ import { DataProvider } from "./context/DataContext.jsx";
 import PuzzleGallery from "./containers/games/PuzzleGallery";
 import VideoDetail from "./containers/videostore/VideoDetail";
 import BookDetails from "./containers/bookstore/BookDetail";
+import ContactUs from "./containers/contact/Contact";
+import Help from "./containers/help/Help";
 
 function App() {
   return (
@@ -37,6 +40,35 @@ function App() {
               <Navbar color="#30ff93" />
               <Header />
               <Footer />
+            </div>
+          }
+        />
+           <Route
+          path="/contact"
+          element={
+            <div>
+              <Navbar color="#30ff93" />
+              <ContactUs  />
+            </div>
+          }
+        />
+                 <Route
+          path="/service"
+          element={
+            <div>
+              <Navbar color="#30ff93" />
+              <ProgramSection  />
+              <Footer  />
+
+            </div>
+          }
+        />
+             <Route
+          path="/help"
+          element={
+            <div>
+              <Navbar color="#30ff93" />
+              <Help  />
             </div>
           }
         />
