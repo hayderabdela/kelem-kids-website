@@ -28,6 +28,7 @@ import BookDetails from "./containers/bookstore/BookDetail";
 import ContactUs from "./containers/contact/Contact";
 import Help from "./containers/help/Help";
 import Puzzle from "./containers/games/puzzle.jsx";
+import Slider from "./containers/slider/Slider.jsx";
 
 function App() {
   return (
@@ -40,36 +41,36 @@ function App() {
             <div>
               <Navbar color="#30ff93" />
               <Header />
+              <Slider />
               <Footer />
             </div>
           }
         />
-           <Route
+        <Route
           path="/contact"
           element={
             <div>
               <Navbar color="#30ff93" />
-              <ContactUs  />
+              <ContactUs />
             </div>
           }
         />
-                 <Route
+        <Route
           path="/service"
           element={
             <div>
               <Navbar color="#30ff93" />
-              <ProgramSection  />
-              <Footer  />
-
+              <ProgramSection />
+              <Footer />
             </div>
           }
         />
-             <Route
+        <Route
           path="/help"
           element={
             <div>
               <Navbar color="#30ff93" />
-              <Help  />
+              <Help />
             </div>
           }
         />
@@ -91,14 +92,13 @@ function App() {
           path="/games/Puzzle"
           element={
             <div>
-              <DataProvider >
-                <Puzzle/>
-              <PuzzleGallery />
-
+              <DataProvider>
+                <Puzzle />
+                <PuzzleGallery />
               </DataProvider>
-    </div>
-  }
-/>
+            </div>
+          }
+        />
 
         <Route
           path="/bookstore"

@@ -1,5 +1,6 @@
+// ContactUs.jsx
 import React, { useState } from "react";
-import "./Contact.css"
+import "./Contact.css";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -7,6 +8,8 @@ const ContactUs = () => {
     email: "",
     message: "",
   });
+
+  const [submissionStatus, setSubmissionStatus] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,8 +21,25 @@ const ContactUs = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add your submission logic here
-    console.log("Form submitted:", formData);
+
+    // Check if any field is empty
+    if (Object.values(formData).some((value) => value.trim() === "")) {
+      setSubmissionStatus("error");
+      return;
+    }
+
+    // Add your actual submission logic here
+
+    // For demonstration purposes, let's simulate a successful submission
+    setTimeout(() => {
+      setSubmissionStatus("success");
+      // Reset form data after successful submission
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
+    }, 1000);
   };
 
   return (
@@ -72,6 +92,20 @@ const ContactUs = () => {
           Submit
         </button>
       </form>
+
+      {submissionStatus === "success" && (
+        <div className="submission-message success">
+          Your message has been submitted successfully!
+        </div>
+      )}
+
+      {submissionStatus === "error" && (
+        <div className="submission-message error">
+          <i className="fas fa-exclamation-triangle" style={{ color: "red" }}>
+            Please fill in all fields before submitting.
+          </i>
+        </div>
+      )}
     </div>
   );
 };

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import one from "../../assets/puzzle-images/one.jpeg";
 import PuzzleButtons from "./PuzzleButtons";
 import { useData } from "../../context/DataContext";
+import "./Puzzle.css"; 
+
 
 const PuzzleCard = () => {
   // const imageWidth = 450;

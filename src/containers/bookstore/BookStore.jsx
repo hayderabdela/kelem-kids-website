@@ -85,9 +85,16 @@ const BookStore = () => {
   return (
     <div className="bookstore-container">
       {/* Hero section with background image */}
-      <div className="hero">
-        <h1>Welcome to the Kids Bookstore</h1>
-        {/* Other content or elements in the hero section */}
+      <div className="book-hero">
+        <div className="book-intro">
+          <h1>Welcome to the Kids Bookstore</h1>
+          <p>
+            Explore a world of literary treasures at our bookstore, where every
+            page holds the promise of a new adventure. Welcome to a haven for
+            book lovers, where stories come to life, and reading is a journey of
+            endless discovery.
+          </p>
+        </div>
       </div>
 
       {/* Content section below the hero */}
@@ -123,16 +130,17 @@ const BookStore = () => {
           </div>
           <div className="books">
             {filteredBooks.map((book) => (
-              <div key={book.id} className="book-card">
+              <Link
+                to={`/bookstore/${book.id}`}
+                key={book.id}
+                className="book-card"
+              >
                 <img src={book.cover} alt={book.title} className="book-cover" />
                 <div className="book-details">
                   <h3 className="book-title">{book.title}</h3>
                   <p className="book-author">By {book.author}</p>
                 </div>
-                <Link to={`/bookstore/${book.id}`} className="book-link">
-                  Explore
-                </Link>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

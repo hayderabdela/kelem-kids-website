@@ -1,25 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./TicTacToe.css";
-
-// ... (your existing imports and code)
 
 const TicTacToe = () => {
   const [board, setBoard] = useState(Array(9).fill(null));
   const [isXNext, setIsXNext] = useState(true);
-  const [players, setPlayers] = useState({ X: '', O: '' });
   const [winner, setWinner] = useState(null);
-  const [namesEntered, setNamesEntered] = useState(false);
+  const [namesEntered, setNamesEntered] = useState(true);
+
+  useEffect(() => {
+    if (!isXNext && !winner && namesEntered) {
+      // Computer's move
+      const computerMove = getComputerMove();
+      setTimeout(() => handleClick(computerMove), 1000); // Introduce a delay to make it more visible
+    }
+  }, [isXNext, winner, namesEntered]);
 
   const handleClick = (index) => {
-    if (winner || board[index] || !namesEntered) {
+    if (winner || board[index] !== null || !namesEntered) {
       if (!namesEntered) {
-        alert('Enter your names to start the game!');
+        alert("Enter your names to start the game!");
       }
       return;
     }
 
     const newBoard = [...board];
-    newBoard[index] = isXNext ? 'X' : 'O';
+    newBoard[index] = isXNext ? "X" : "O";
     setBoard(newBoard);
     setIsXNext(!isXNext);
     checkWinner(newBoard, index);
@@ -50,7 +55,7 @@ const TicTacToe = () => {
     }
 
     if (!currentBoard.includes(null)) {
-      setWinner('Draw');
+      setWinner("Draw");
     }
   };
 
@@ -58,8 +63,7 @@ const TicTacToe = () => {
     setBoard(Array(9).fill(null));
     setIsXNext(true);
     setWinner(null);
-    setNamesEntered(false);
-    setPlayers({ X: '', O: '' }); // Clear player names
+    setNamesEntered(true);
   };
 
   const renderSquare = (index) => (
@@ -68,56 +72,32 @@ const TicTacToe = () => {
     </button>
   );
 
-  const handleNameChange = (player, e) => {
-    if (player === 'X') {
-      setPlayers({ ...players, X: e.target.value });
-    } else {
-      setPlayers({ ...players, O: e.target.value });
-    }
-    if (players.X && players.O) {
-      setNamesEntered(true);
-    }
+  const getComputerMove = () => {
+    // Simple medium-level computer player logic
+    // Randomly choose an empty cell for now
+    const emptyCells = board.reduce((acc, cell, index) => {
+      if (cell === null) {
+        acc.push(index);
+      }
+      return acc;
+    }, []);
+
+    const randomIndex = Math.floor(Math.random() * emptyCells.length);
+    return emptyCells[randomIndex];
   };
 
   const status = winner
-    ? winner === 'Draw'
-      ? 'It\'s a Draw!'
-      : `Player ${players[winner]} Wins!`
+    ? winner === "Draw"
+      ? "It's a Draw!"
+      : `Player ${winner} Wins!`
     : namesEntered
-    ? `Next player: ${players[isXNext ? 'X' : 'O']}`
-    : 'Enter your names to start the game!';
+    ? `Next player: ${isXNext ? "X" : "O"}`
+    : "Game is ready!";
 
   return (
     <div className="tic-tac-toe">
       <h1>Tic-Tac-Toe Game</h1>
       <div className="status">{status}</div>
-      <div className="player-input">
-        <label>Name : </label>
-        <input
-          type="text"
-          value={players.X}
-          onChange={(e) => handleNameChange('X', e)}
-          placeholder="Player 1"
-        />
-        <label>Name: </label>
-        <input
-          type="text"
-          value={players.O}
-          onChange={(e) => handleNameChange('O', e)}
-          placeholder="Player 2"
-        />
-      </div>
-      {namesEntered && (
-        <div className="player-selection">
-          <p>Select : </p>
-          <button onClick={() => setIsXNext(true)} disabled={winner !== null}>
-            X
-          </button>
-          <button onClick={() => setIsXNext(false)} disabled={winner !== null}>
-            O
-          </button>
-        </div>
-      )}
       <div className="board">
         {board.map((square, index) => (
           <div key={index} className="board-cell">
@@ -133,4 +113,3 @@ const TicTacToe = () => {
 };
 
 export default TicTacToe;
-

@@ -25,10 +25,24 @@ body {
   background-size: cover;
   background-position: center;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
+  flex-direction: column;
+  justify-content: center;  /* justify-content: center; */
   text-align: center;
+}
+
+.game-intro{
+      display: flex;
+        flex-direction: column;
+        width: 800px;
+        /* margin: 100px; */
+        padding: 10px;
+        font-family: 'Boogaloo', sans-serif;
+        font-size: x-large;
+        color:black;
+}
+.game-hero h1{
+      font-weight: bold;
+        animation: colorChange 10s infinite;
 }
 .games-activity{
   display: flex;

@@ -1,0 +1,136 @@
+/* Puzzle.css */
+
+.puzzle-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #edf2f7;
+    color: #4a5568;
+}
+
+/* PuzzleButtons.css */
+
+.puzzle-buttons-container {
+    display: flex;
+    padding: 0 0.5rem;
+    gap: 1rem;
+}
+
+.puzzle-button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    background-color: #38a169;
+    border: 1px solid #4299e1;
+    cursor: pointer;
+}
+
+.puzzle-button:hover {
+    background-color: #81e6d9;
+}
+
+/* PuzzleCard.css */
+
+.puzzle-card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.5rem;
+}
+
+.completed-message {
+    color: #38a169;
+}
+
+.puzzle-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.puzzle-pieces {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.puzzle-piece {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-size: cover;
+    cursor: grab;
+    box-sizing: border-box;
+}
+
+.puzzle-buttons-container {
+    display: flex;
+    padding: 0 0.5rem;
+    gap: 1rem;
+}
+
+.puzzle-button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    background-color: #38a169;
+    border: 1px solid #4299e1;
+    cursor: pointer;
+}
+
+.puzzle-button:hover {
+    background-color: #81e6d9;
+}
+
+/* PuzzleDifficulty.css */
+
+.difficulty-container {
+    display: flex;
+    gap: 3rem;
+    flex-direction: row;
+    padding: 3rem 5px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.difficulty-header {
+    display: flex;
+    gap: 2rem;
+    background-color: #4299e1;
+    width: 50%;
+    padding: 2px;
+    height: 2rem;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.difficulty-title {
+    margin: 0;
+}
+
+.arrow-icon {
+    cursor: pointer;
+    width: 1.75rem;
+    height: 1.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.difficulty-options {
+    display: flex;
+    gap: 3rem;
+    width: 50%;
+}
+
+.option-item {
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 0.375rem;
+    flex: 0 0 auto;
+    transition: background-color 0.3s ease;
+}
+
+.option-item:hover {
+    background-color: #cbd5e0;
+}

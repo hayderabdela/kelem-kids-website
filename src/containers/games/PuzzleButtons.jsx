@@ -1,4 +1,5 @@
 import React from "react";
+import "./Puzzle.css";
 
 const PuzzleButtons = ({ onShuffle, disabled, onchangeImage }) => {
   return (

@@ -1,0 +1,45 @@
+/* Slider.css */
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    /* Set your desired max width */
+    margin: 80px auto;
+}
+
+.slider-image {
+    width: 100%;
+    height: 400px;
+    /* Set your desired height */
+    object-fit: cover;
+    border-radius: 8px;
+    /* Adjust border-radius as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Add a subtle shadow */
+}
+
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.slider-button.prev {
+    left: 10px;
+}
+
+.slider-button.next {
+    right: 10px;
+}
+
+.slider-button:hover {
+    background-color: #ddd;
+    color: #333;
+}

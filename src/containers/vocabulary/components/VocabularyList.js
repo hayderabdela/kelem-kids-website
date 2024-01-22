@@ -11,12 +11,12 @@ const VocabularyList = ({ category, words, onButtonClick }) => {
               src={word.image}
               alt={word.name}
               onClick={() => onButtonClick(word.audio)}
-              style={{ cursor: 'pointer', marginRight: '10px' }}
+              style={{ cursor: "pointer", marginRight: "10px" }}
             />
-            <div className='button-container'>
-              <button onClick={() => onButtonClick(word.audio)}>play the sound</button>
-              </div>
-            <h3>{word.name}</h3>
+            <div className="button-container">
+              {/* <button onClick={() => onButtonClick(word.audio)}>play</button> */}
+              <h3>{word.name}</h3>
+            </div>
           </div>
         ))}
       </div>

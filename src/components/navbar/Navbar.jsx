@@ -1,14 +1,15 @@
-import React, { useState, useEffect, useRef} from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
-import logo from "../../assets/kelemlogo.png"
+import logo from "../../assets/kelemlogo.png";
+import { Link, useLocation } from "react-router-dom";
 
 import "./navbar.css";
-import { Link } from "react-router-dom";
 
-const Navbar = ({color}) => {
+const Navbar = ({ color }) => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [showLoginForm, setShowLoginForm] = useState(false);
   const loginFormRef = useRef();
+  const location = useLocation();
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -33,7 +34,6 @@ const Navbar = ({color}) => {
   const handleLoginClick = () => {
     setToggleMenu(false);
     setShowLoginForm(true);
-
   };
 
   const handleLoginClose = () => {
@@ -41,14 +41,14 @@ const Navbar = ({color}) => {
   };
 
   return (
-    <div className="navbar" style={{backgroundColor:`${color}`}}>
+    <div className="navbar" style={{ backgroundColor: `${color}` }}>
       <div className="navbar-links">
         <div className="navbar-links_logo">
-        <img src={logo} alt="Logo" />
+          <img src={logo} alt="Logo" />
         </div>
         <div className="navbar-links_container">
-          <p >
-            <Link to={'/'}>Home</Link>
+          <p>
+            <Link to={"/"}>Home</Link>
           </p>
           <p>
             <a href="/header">About</a>
@@ -65,7 +65,11 @@ const Navbar = ({color}) => {
         </div>
       </div>
       <div className="navbar-sign">
-        <Link to={"login-signup"}><button type="button">Sign up</button></Link>
+        {location.pathname === "/" && (
+          <Link to={"login-signup"}>
+            <button type="button">Sign up</button>
+          </Link>
+        )}
       </div>
       {showLoginForm && (
         <div className="login-form">
@@ -108,24 +112,28 @@ const Navbar = ({color}) => {
           <div className="navbar-menu_container scale-up-center">
             <div className="navbar-menu_container-links">
               <p>
-                <Link to={'/'}>Home</Link>
+                <Link to={"/"}>Home</Link>
               </p>
               <p>
-                <Link to="/header">About</Link>
+                <Link to={"/header"}>About</Link>
               </p>
               <p>
-                <a href="#service">Service</a>
+                <a href={"/service"}>Service</a>
               </p>
               <p>
-                <a href="#help">Help</a>
+                <a href={"/help"}>Help</a>
               </p>
               <p>
-                <a href="#contact">Contact</a>
+                <a href={"/contact"}>Contact</a>
               </p>
             </div>
             <div className="navbar-menu_container-links-sign">
               <p onClick={handleLoginClick}>Sign in</p>
-              <button type="button">Sign up</button>
+              {location.pathname === "/" && (
+                <Link to={"login-signup"}>
+                  <button type="button">Sign up</button>
+                </Link>
+              )}
             </div>
           </div>
         )}

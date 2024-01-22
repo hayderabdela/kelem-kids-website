@@ -47,18 +47,18 @@ body {
   flex-wrap: wrap; /* Allow items to wrap to the next line */
   justify-content: center;
   align-items: center;
-  background-color: #ffc517;
+  /* background-color: #ffc517; */
   padding: 10px;
   border-radius: 10px;
   margin-bottom: 20px;
   font-size: 1.5rem;
 }
 
-.btn{
+.vocabulary-btn{
   margin-top: 40px;
 }
 
-.btn ul {
+.vocabulary-btn ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -67,7 +67,7 @@ body {
   justify-content: center;
 }
 
-.btn li {
+.vocabulary-btn li {
   cursor: pointer;
   margin: 10px; /* Adjust margin for spacing */
   width: 120px; /* Set a fixed width for each box */
@@ -153,6 +153,11 @@ body {
   color: white;
   transform: scale(1.1);
 }
+
+.button-container{
+  text-align:center;
+}
+
 
 
 /* Your existing category list styles */

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { IoArrowDown } from "react-icons/io5";
 import { IoMdArrowUp } from "react-icons/io";
 import { useData } from "../../context/DataContext";
+import "./Puzzle.css";
 
 const PuzzleDifficulty = () => {
   const { handleDifficultyChange } = useData();
